@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     }
                 });
                 this.requestFullscreen();
-                handleOrientationChange()
+                handleOrientationChange();
                 lastPlayedVideo = this;
             } else {
                 this.pause();
