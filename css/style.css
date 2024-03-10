@@ -42,8 +42,7 @@ img,
 .header {
     width: 100%;
     min-height: 200px;
-    background-color: pink;
-    background-size: 200%;
+    background-size: 400%;
     background-position: center center;
     background-repeat: no-repeat;
 }
