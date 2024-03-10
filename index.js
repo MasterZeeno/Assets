@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", event => {
                 // Pan to the last played video player
                 const rect = lastPlayedVideo.getBoundingClientRect();
                 window.scrollTo({
-                    top: rect.top + window.scrollY,
+                    top: rect.height + rect.top + window.scrollY,
                     left: rect.left + window.scrollX,
                     behavior: "smooth"
                 });
