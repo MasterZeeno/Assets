@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", event => {
         player.addEventListener("click", function () {
             if (player.paused && player.readyState > 1) {
                 player.play();
+                toggleFullScreen(player);
                 // pauseOthers(player);
             } else {
                 player.pause();
@@ -91,7 +92,6 @@ document.addEventListener("DOMContentLoaded", event => {
 
         player.onplaying = function () {
             lastPlayedVideo = player;
-            toggleFullScreen(player);
             pauseOthers(player);
         };
 
@@ -166,8 +166,8 @@ document.addEventListener("DOMContentLoaded", event => {
         // pauseOthers(lastPlayedVideo);
         if (!document.fullscreenElement && lastPlayedVideo) {
             // if (lastPlayedVideo.paused) {
-            //                 lastPlayedVideo.play();
-            //             }
+//                 lastPlayedVideo.play();
+//             }
             setTimeout(() => {
                 const rect = lastPlayedVideo.getBoundingClientRect();
                 window.scrollTo({
