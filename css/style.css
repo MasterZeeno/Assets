@@ -98,3 +98,7 @@ span {
     justify-content: center;
     align-items: center;
 }
+
+.items {
+  text-align: center;
+}
