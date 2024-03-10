@@ -101,12 +101,12 @@ document.addEventListener("DOMContentLoaded", event => {
                 });
                 const currentPage = Number(currPage);
                 if (currentPage) {
-                    if (currPage > 1) {
+                    if (currentPage > 1) {
                         const prev = document.createElement("div");
                         prev.innerText = "<<";
                         pager.append(prev);
                     }
-                    if (currPage >= 1 && currPage <= lastPage) {
+                    if (currentPage >= 1 && currentPage <= lastPage) {
                         const curr = document.createElement("div");
                         prev.innerText = currPage;
                         pager.append(curr);
