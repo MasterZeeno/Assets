@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", event => {
                 for (let step = currPage; step <= lastPage; step++) {
                     const items = document.createElement("div");
                     items.innerText =
-                        step);
+                        step;
                     pager.append(items);
                 }
 
