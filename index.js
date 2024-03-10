@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", event => {
         });
 
         player.onplaying = function () {
-          lastPlayedVideo = player;
+            lastPlayedVideo = player;
             pauseOthers(player);
         };
 
