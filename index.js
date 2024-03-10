@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", event => {
             }
         } else if (document.exitFullscreen) {
             document.exitFullscreen();
-            video.classList.remove("fullScreen");
         }
     }
 
