@@ -51,7 +51,6 @@ img,
 .cover {
     overflow-x: hidden !important;
     width: 100%;
-    position: relative;
 }
 
 .cover {
