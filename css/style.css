@@ -51,13 +51,13 @@ img,
 .cover {
     overflow-x: hidden !important;
     width: 100%;
+    position: relative;
 }
 
 .cover {
     height: 100%;
     background-color: rgb(0 0 0 / 30%);
     backdrop-filter: blur(4px);
-    position: relative;
     z-index: 2;
 }
 
