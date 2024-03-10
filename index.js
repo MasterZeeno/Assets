@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", event => {
             const halfLen = name.length / 2;
             names = [
                 name.substring(0, halfLen),
-                name.substring(halfLen + 1, name.length)
+                name.substring(halfLen, name.length)
             ];
         }
         name1.innerText = names[0];
-        name2.innerText = names[1];
+        name2.innerText = names[1] || '';
     }
 
     const videoList = document.querySelector(".video-list");
