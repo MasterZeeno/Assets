@@ -99,6 +99,9 @@ document.addEventListener("DOMContentLoaded", event => {
                         createVideoJs(video_url, image_url);
                     }
                 });
+                
+                const cover = document.createElement('div')
+                videoList.append(cover);
 
                 for (let step = currPage; step <= lastPage; step++) {
                     const items = document.createElement("div");
