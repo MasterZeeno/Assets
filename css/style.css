@@ -53,44 +53,44 @@ video {
 
 /* Hide controls in fullscreen */
 video:-webkit-full-screen::-webkit-media-controls {
-  display: none !important;
+    display: none !important;
 }
 
 video:-moz-full-screen::-moz-media-controls {
-  display: none !important;
+    display: none !important;
 }
 
 video:-ms-fullscreen::-ms-media-controls {
-  display: none !important;
+    display: none !important;
 }
 
 video:fullscreen::-webkit-media-controls {
-  display: none !important;
+    display: none !important;
 }
 
 video:fullscreen::-moz-media-controls {
-  display: none !important;
+    display: none !important;
 }
 
 video:fullscreen::-ms-media-controls {
-  display: none !important;
+    display: none !important;
 }
 
 /* Show toggle fullscreen control in fullscreen */
 video:-webkit-full-screen {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 video:-moz-full-screen {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 video:-ms-fullscreen {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 video:fullscreen {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .notplaying {
