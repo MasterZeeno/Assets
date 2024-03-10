@@ -65,16 +65,15 @@ document.addEventListener("DOMContentLoaded", event => {
                 });
             } else {
                 this.pause();
-                
             }
             if (this.playing) {
-              this.classList.remove("notplaying");
+                this.classList.remove("notplaying");
                 setTimeout(() => {
                     toggleFullScreen(this);
                     lastPlayedVideo = this;
                 }, 300);
             } else {
-              this.classList.add("notplaying");
+                this.classList.add("notplaying");
             }
         });
         videoList.append(player);
