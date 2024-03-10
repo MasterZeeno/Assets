@@ -64,20 +64,17 @@ document.addEventListener("DOMContentLoaded", event => {
                         otherVideo.classList.add("notplaying");
                     }
                 });
-                setTimeout(() => {
-                    toggleFullScreen(this);
-                    lastPlayedVideo = this;
-                }, 300);
+                
             } else {
                 this.pause();
                 this.classList.add("notplaying");
             }
-            if (video.playing) {
-  // Video is currently playing
-} else {
-  // Video is paused or has ended
-}
-
+            if (this.playing) {
+setTimeout(() => {
+                    toggleFullScreen(this);
+                    lastPlayedVideo = this;
+                }, 300);
+            }
         });
         videoList.append(player);
     }
