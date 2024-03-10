@@ -128,8 +128,8 @@ document.addEventListener("DOMContentLoaded", event => {
             "fullScreen",
             document.fullscreenElement
         );
+        pauseOthers(lastPlayedVideo);
         if (!document.fullscreenElement && lastPlayedVideo) {
-            pauseOthers(lastPlayedVideo);
             setTimeout(() => {
                 const rect = lastPlayedVideo.getBoundingClientRect();
                 window.scrollTo({
