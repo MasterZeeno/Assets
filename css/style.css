@@ -135,7 +135,8 @@ span {
 }
 
 .pager > *:hover {
-  color: white;
+    color: white;
+    background-color: rgb(255 144 0 / 30%)
 }
 
 .current {
