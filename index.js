@@ -102,18 +102,18 @@ document.addEventListener("DOMContentLoaded", event => {
                 const currentPage = Number(currPage) || null;
                 if (currentPage) {
                     if (currentPage > 1) {
-                        const prev = document.createElement("button");
+                        const prev = document.createElement("div");
                         prev.innerText = "Prev";
                         pager.append(prev);
                     }
                     if (currentPage >= 1 && currentPage <= lastPage) {
-                        const curr = document.createElement("button");
+                        const curr = document.createElement("div");
                         curr.classList.add("current");
                         curr.innerText = currPage;
                         pager.append(curr);
                     }
                     if (currentPage < lastPage) {
-                        const last = document.createElement("button");
+                        const last = document.createElement("div");
                         last.innerText = "Next";
                         pager.append(last);
                     }
