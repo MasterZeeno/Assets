@@ -70,4 +70,5 @@ window.addEventListener("DOMContentLoaded", event => {
             video.requestFullscreen();
         }
     }
+    toggleFullScreen()
 });
