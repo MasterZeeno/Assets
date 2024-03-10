@@ -61,32 +61,47 @@ window.addEventListener("DOMContentLoaded", event => {
 });
 
 window.addEventListener("load", event => {
-    // Get all the video elements
-    const videos = document.querySelectorAll("video");
+  const videos = document.querySelectorAll('video');
 
-    // Create an Intersection Observer
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                // If the video is in the viewport, play it
-                if (entry.isIntersecting) {
-                    console.log(entry.target.name);
-                    entry.target.play();
-                }
-                // If the video is not in the viewport, pause it
-                else {
-                    entry.target.pause();
-                }
-            });
-        },
-        {
-            // Trigger the observer when the video is 50% visible
-            threshold: 0.5
-        }
-    );
+    // Function to check if an element is in the center of the viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
-    // Observe each video
-    videos.forEach(video => {
-        observer.observe(video);
-    });
+    // Function to play or pause videos based on center alignment
+    function handleVideoPlayPause() {
+        videos.forEach(video => {
+            if (isElementInViewport(video)) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    }
+
+    // Event listener to handle scroll and resize events
+    window.addEventListener('scroll', handleVideoPlayPause);
+    window.addEventListener('resize', handleVideoPlayPause);
+
+    // Initial check when the page loads
+    handleVideoPlayPause();
+</script>
+
+</body>
+</html>
+This code will play the video when it comes into the center of the viewport and pause it when it goes out of the center. It listens for scroll and resize events to update the play/pause state accordingly.
+
+
+
+
+
+Message ChatGPT…
+
+ChatGPT can make mistakes. Consider checking impo
 });
