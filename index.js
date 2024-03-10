@@ -15,14 +15,20 @@ document.addEventListener("DOMContentLoaded", event => {
         }
     }
 
+    function handleOrientationChange() {
+        if (screen.orientation.type.startsWith('portrait')) {
+            screen.orientation.lock('landscape');
+        }
+    }
+
     function createVideoJs(video_source, image_source) {
         const player = document.createElement("video");
         player.setAttribute("class", "notplaying");
         player.setAttribute("poster", image_source);
-        // player.setAttribute("controls", "");
         player.setAttribute("autoplay", "");
         player.setAttribute("muted", "false");
         player.setAttribute("name", "media");
+        player.setAttribute("controls", false); // Hide default controls
         const player_source = document.createElement("source");
         player_source.setAttribute("src", video_source);
         player_source.setAttribute("type", video_type);
@@ -46,8 +52,15 @@ document.addEventListener("DOMContentLoaded", event => {
             }
         });
         videoList.append(player);
-        // player.load();
     }
+
+    const exitFullscreenButton = document.createElement("button");
+    exitFullscreenButton.innerText = "Exit Fullscreen";
+    exitFullscreenButton.addEventListener("click", () => {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    });
 
     url =
         "https://script.google.com/macros/s/AKfycbx__TeLYl-rasvQ2msCnxNI7MpZB4BBp2Xmm-ZcTppgvRnrc4uQnCGWyUZlk5mppcD9/exec";
@@ -56,11 +69,8 @@ document.addEventListener("DOMContentLoaded", event => {
         .then(response => response.json())
         .then(res => {
             header.style.backgroundImage = "url('" + res.header + "')";
-
             profile.setAttribute("src", res.profile);
-
             name.innerText = res.name;
-
             res.urls.forEach(e => {
                 if (e.video_url && e.image_url) {
                     createVideoJs(e.video_url, e.image_url);
@@ -68,4 +78,6 @@ document.addEventListener("DOMContentLoaded", event => {
             });
             toggleFullScreen();
         });
+
+    document.addEventListener('fullscreenchange', handleOrientationChange);
 });
