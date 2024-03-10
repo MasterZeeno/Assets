@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", event => {
 
     document.addEventListener("fullscreenchange", function () {
         if (!document.fullscreenElement && lastPlayedVideo) {
-          pauseOthers(lastPlayedVideo)
+            pauseOthers(lastPlayedVideo);
             // Pan to the last played video player
             setTimeout(() => {
                 // Pan to the last played video player
