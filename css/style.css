@@ -76,6 +76,7 @@ img {
     opacity: 0.36;
     /* -webkit-filter: grayscale(69%) blur(1px);
     filter: grayscale(69%) blur(1px); */
+    mix-blend-mode: multiply;
     border: none;
     border-top: 3px solid rgb(0 0 0 / 30%);
     border-bottom: 3px solid rgb(0 0 0 / 30%);
