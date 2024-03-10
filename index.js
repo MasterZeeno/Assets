@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", event => {
         player_source.setAttribute("type", video_type);
         player.append(player_source);
         player.addEventListener("click", function () {
-            toggleFullScreen();
+            toggleFullScreen(player);
             if (player.paused) {
                 player.play();
                 player.classList.remove("notplaying");
