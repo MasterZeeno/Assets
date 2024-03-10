@@ -104,8 +104,6 @@ document.addEventListener("DOMContentLoaded", event => {
                     if (currentPage > 1) {
                         const prev = document.createElement("button");
                         prev.innerText = "Prev";
-                        prev.setAttribute("type", "submit");
-                        pager.append(prev);
                     }
                     if (currentPage >= 1 && currentPage <= lastPage) {
                         const curr = document.createElement("button");
