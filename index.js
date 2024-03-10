@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     }
                     if (currentPage >= 1 && currentPage <= lastPage) {
                         const curr = document.createElement("div");
-
+                        curr.classList.add('current')
                         curr.innerText = currPage;
                         pager.append(curr);
                     }
