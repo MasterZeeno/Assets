@@ -59,3 +59,29 @@ window.addEventListener("DOMContentLoaded", event => {
     //         createVideoJs(v_src, i_src);
     //     });
 });
+
+
+ // Get all the video elements
+        const videos = document.querySelectorAll('.auto-play');
+
+        // Create an Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // If the video is in the viewport, play it
+                if (entry.isIntersecting) {
+                    entry.target.play();
+                } 
+                // If the video is not in the viewport, pause it
+                else {
+                    entry.target.pause();
+                }
+            });
+        }, {
+            // Trigger the observer when the video is 50% visible
+            threshold: 0.5
+        });
+
+        // Observe each video
+        videos.forEach(video => {
+            observer.observe(video);
+        });
