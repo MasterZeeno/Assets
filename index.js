@@ -99,8 +99,11 @@ document.addEventListener("DOMContentLoaded", event => {
                         createVideoJs(video_url, image_url);
                     }
                 });
+                
+                if(currPage && currPage ==1){
+                const prev = document.createElement("div");
 
-                for (let step = currPage; step <= lastPage; step++) {
+                for (let step = 0; step <= 2; step++) {
                     const items = document.createElement("div");
                     items.innerText = step;
                     if (step == currPage) {
