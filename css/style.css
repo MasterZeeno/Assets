@@ -19,8 +19,8 @@ body {
 }
 
 h1 {
-    margin-top: var(--profile-size);
-    margin-bottom: 30px;
+    /* margin-top: var(--profile-size); */
+    margin: 30px auto;
 }
 
 video,
