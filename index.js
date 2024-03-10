@@ -64,13 +64,12 @@ document.addEventListener("DOMContentLoaded", event => {
                         otherVideo.classList.add("notplaying");
                     }
                 });
-                
             } else {
                 this.pause();
                 this.classList.add("notplaying");
             }
             if (this.playing) {
-setTimeout(() => {
+                setTimeout(() => {
                     toggleFullScreen(this);
                     lastPlayedVideo = this;
                 }, 300);
