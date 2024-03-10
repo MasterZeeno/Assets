@@ -17,7 +17,8 @@ window.addEventListener("DOMContentLoaded", event => {
         // player.setAttribute("class", "video-js vjs-fluid vjs-controls-enabled vjs-touch-enabled");
         player.setAttribute("controls", "");
         player.setAttribute("autoplay", "");
-        player.setAttribute("muted", "");
+        player.setAttribute("muted", "true");
+        player.setAttribute("name", "media");
         // player.setAttribute("loop", "");
         // player.setAttribute("preload", "metadata");
         const player_source = document.createElement("source");
