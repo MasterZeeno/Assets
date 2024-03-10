@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", event => {
 
     let lastPlayedVideo;
     let videos;
-    
-    body.classList.add('noready')
+
+    body.classList.add("noready");
 
     function splitName(name) {
         const names = name.includes(" ")
@@ -188,4 +188,5 @@ document.addEventListener("DOMContentLoaded", event => {
             }, 500);
         }
     });
+    body.classList.remove('notready');
 });
