@@ -8,14 +8,6 @@ document.addEventListener("DOMContentLoaded", event => {
     const videoList = document.querySelector(".video-list");
     let lastPlayedVideo;
 
-    function toggleFullScreen() {
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen();
-        } else if (document.exitFullscreen) {
-            document.exitFullscreen();
-        }
-    }
-
     function handleOrientationChange() {
         if (screen.orientation.type.startsWith("portrait")) {
             screen.orientation.lock("landscape");
@@ -81,7 +73,6 @@ document.addEventListener("DOMContentLoaded", event => {
                     createVideoJs(e.video_url, e.image_url);
                 }
             });
-            toggleFullScreen();
         });
 
     document.addEventListener("fullscreenchange", function () {
