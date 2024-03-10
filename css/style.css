@@ -98,7 +98,8 @@ video:fullscreen {
 }
  */
 
-.Z, .notready {
+.Z,
+.notready {
     opacity: 0;
     height: 0;
     width: 0;
