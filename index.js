@@ -35,6 +35,7 @@ window.addEventListener("DOMContentLoaded", event => {
             } else {
                 this.pause();
                 this.classList.add("notplaying");
+                document.exitFullscreen();
             }
         });
         videoList.append(player);
