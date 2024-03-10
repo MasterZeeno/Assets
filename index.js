@@ -90,6 +90,8 @@ document.addEventListener("DOMContentLoaded", event => {
                     createVideoJs(video_url, image_url);
                 }
             });
+            
+            for()
 
             // Query for all videos after they are added to the DOM
             videos = document.querySelectorAll("video");
