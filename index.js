@@ -18,19 +18,7 @@ window.addEventListener("DOMContentLoaded", event => {
         player_source.setAttribute("src", video_source);
         player_source.setAttribute("type", video_type);
         player.append(player_source);
-        player.addEventListener("click", function () {
-            if (player.paused) {
-                player.play();
-                const videos = document.querySelectorAll("video");
-                videos.forEach(video => {
-                    if (video !== player && !video.paused) {
-                        video.pause();
-                    }
-                });
-            } else {
-                player.pause();
-            }
-        });
+        player.addEventListener("click", handleVideoPlayPause);
         videoList.append(player);
         // player.load();
     }
@@ -71,16 +59,21 @@ window.addEventListener("DOMContentLoaded", event => {
 
     // Function to play or pause videos based on center alignment
     function handleVideoPlayPause() {
-        videos.forEach(video => {
-            if (isElementInViewport(video)) {
+    videos.forEach(video => {
+        if (isElementInViewport(video)) {
+            if (video.paused) {
                 video.play();
-                video.click();
-            } else {
-                video.pause();
+                videos.forEach(otherVideo => {
+                    if (otherVideo !== video && !otherVideo.paused) {
+                        otherVideo.pause();
+                    }
+                });
             }
-        });
-    }
-
+        } else {
+            video.pause();
+        }
+    });
+}
     // Event listener to handle scroll and resize events
     window.addEventListener("scroll", handleVideoPlayPause);
     window.addEventListener("resize", handleVideoPlayPause);
