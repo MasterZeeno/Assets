@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", event => {
     const video_type = "application/vnd.apple.mpegurl";
-    
+
     const body = document.querySelector("body");
 
     const header = document.querySelector(".header");
@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", event => {
 
     let lastPlayedVideo;
     let videos;
+    
+    body.classList.add('noready')
 
     function splitName(name) {
         const names = name.includes(" ")
