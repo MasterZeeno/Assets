@@ -71,7 +71,6 @@ img {
     width: var(--profile-size);
     border-radius: 50%;
     border: 3px solid black;
-    z-index: 2;
 }
 
 .notplaying {
@@ -84,9 +83,7 @@ img {
 }
 
 .name {
-    position: relative;
     margin: 30px auto;
-    z-index: 2;
 }
 
 span {
