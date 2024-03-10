@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", event => {
         player_source.setAttribute("type", video_type);
         player.append(player_source);
         player.addEventListener("click", function () {
-            toggleFullScreen(this);
+            
             if (this.paused) {
                 this.play();
                 this.classList.remove("notplaying");
@@ -36,6 +36,7 @@ window.addEventListener("DOMContentLoaded", event => {
                 this.pause();
                 this.classList.add("notplaying");
             }
+            toggleFullScreen(this);
         });
         videoList.append(player);
         // player.load();
