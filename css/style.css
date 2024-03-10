@@ -53,10 +53,10 @@ img,
     border: 3px solid black;
 }
 
-video.notPlaying {
-  opacity: 0.8;
+.notPlaying {
+    opacity: 0.8;
 }
 
-video.playing {
-  opacity: 1;
+.playing {
+    opacity: 1;
 }
