@@ -18,7 +18,20 @@ window.addEventListener("DOMContentLoaded", event => {
         player_source.setAttribute("src", video_source);
         player_source.setAttribute("type", video_type);
         player.append(player_source);
-        player.addEventListener("click", handleVideoPlayPause(player));
+        player.addEventListener("click", function () {
+            if (player.paused) {
+                player.play();
+                const videos = document.querySelectorAll("video");
+
+                videos.forEach(otherVideo => {
+                    if (otherVideo !== video && !otherVideo.paused) {
+                        otherVideo.pause();
+                    }
+                });
+            } else {
+                player.pause();
+            }
+        });
         videoList.append(player);
         // player.load();
     }
