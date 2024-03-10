@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", event => {
 
         player.addEventListener("click", function () {
             if (player.paused) {
-                player.classList.remove("notplaying");
                 player.play();
                 pauseOthers(player);
                 toggleFullScreen(player);
@@ -72,6 +71,7 @@ document.addEventListener("DOMContentLoaded", event => {
                 player.pause();
                 player.classList.add("notplaying");
             }
+            player.classList.toggle("notplaying", player.paused);
         });
         videoList.append(player);
     }
