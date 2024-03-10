@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", event => {
     fetch(url)
         .then(response => response.json())
         .then(res => {
-            header.style.backgroundImage = "url(" + res.header + ")";
+            header.style.backgroundImage = "url('" + res.header + "')";
 
             profile.setAttribute("src", res.profile);
 
