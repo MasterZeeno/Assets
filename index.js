@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     }
                     if (currentPage < lastPage) {
                         const last = document.createElement("div");
-                        last.innerText = ">>";
+                        last.innerText = "Next";
                         pager.append(last);
                     }
                 }
