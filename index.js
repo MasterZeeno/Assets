@@ -104,8 +104,10 @@ document.addEventListener("DOMContentLoaded", event => {
         };
 
         player.oncanplay = function () {
-            player.classList.remove("notready");
-            player.classList.add("notplaying");
+            setTimeout(() => {
+                player.classList.remove("notready");
+                player.classList.add("notplaying");
+            }, 1000);
         };
 
         // player.addEventListener("dblclick", function () {
