@@ -34,7 +34,7 @@ video {
     border: 4px solid #ff9000;
     border-radius: 4px;
     position: relative;
-        z-index: 0;
+    z-index: 0;
 }
 
 video,
