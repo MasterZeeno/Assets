@@ -32,6 +32,7 @@ window.addEventListener("DOMContentLoaded", event => {
                     }
                 });
             } else {
+                player.classList.add("notplaying");
                 player.pause();
             }
         });
