@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", event => {
     function pauseOthers(currentVid) {
         const videos = document.querySelectorAll("video");
         videos.forEach(otherVideo => {
-            if (otherVideo !== currentVid && !otherVideo.paused) {
+            if (otherVideo !== currentVid) {
                 otherVideo.pause();
                 otherVideo.classList.add("notplaying");
             }
