@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", event => {
 
     document.addEventListener("fullscreenchange", function () {
         if (!document.fullscreenElement && lastPlayedVideo) {
-            pauseOthers(lastPlayedVideo);
+            
             // Pan to the last played video player
             setTimeout(() => {
                 const rect = lastPlayedVideo.getBoundingClientRect();
@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     behavior: "smooth"
                 });
             }, 500);
+            pauseOthers(lastPlayedVideo);
         }
     });
 });
