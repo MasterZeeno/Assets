@@ -6,6 +6,14 @@ document.addEventListener("DOMContentLoaded", event => {
     const name = document.querySelector(".name");
 
     const videoList = document.querySelector(".video-list");
+    
+    function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
 
     function createVideoJs(video_source, image_source) {
         const player = document.createElement("video");
@@ -58,14 +66,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     createVideoJs(e.video_url, e.image_url);
                 }
             });
-            toggleFullScreen()
+            toggleFullScreen();
         });
-        function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-  }
-}
-
+    
 });
