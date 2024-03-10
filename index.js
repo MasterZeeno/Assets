@@ -90,6 +90,10 @@ document.addEventListener("DOMContentLoaded", event => {
             }
             player.classList.toggle("notplaying", player.paused);
         });
+        
+        player.onplaying = function() {
+  alert("The video is now playing");
+};
 
         // player.addEventListener("dblclick", function () {
         //             lastPlayedVideo = player;
