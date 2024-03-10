@@ -106,4 +106,18 @@ document.addEventListener("DOMContentLoaded", event => {
             }, 500);
         }
     });
+    const button = document.querySelector(".sticky");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // The video is visible, hide the button
+                button.style.display = "none";
+            } else {
+                // The video is not visible, show the button
+                button.style.display = "block";
+            }
+        });
+    });
+    observer.observe(lastPlayedVideo);
 });
