@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", event => {
                         otherVideo.classList.add("notplaying");
                     }
                 });
-                toggleFullScreen();
+                toggleFullScreen(this);
                 lastPlayedVideo = this;
             } else {
                 this.pause();
