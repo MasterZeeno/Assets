@@ -21,20 +21,20 @@ window.addEventListener("DOMContentLoaded", event => {
         player.append(player_source);
         player.addEventListener("click", function () {
             toggleFullScreen(this);
-            if (player.paused) {
-                player.play();
-                player.classList.remove("notplaying");
+            if (this.paused) {
+                this.play();
+                this.classList.remove("notplaying");
                 const videos = document.querySelectorAll("video");
 
                 videos.forEach(otherVideo => {
-                    if (otherVideo !== player && !otherVideo.paused) {
+                    if (otherVideo !== this && !otherVideo.paused) {
                         otherVideo.pause();
                         otherVideo.classList.add("notplaying");
                     }
                 });
             } else {
-                player.pause();
-                player.classList.add("notplaying");
+                this.pause();
+                this.classList.add("notplaying");
             }
         });
         videoList.append(player);
