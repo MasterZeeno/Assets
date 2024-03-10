@@ -113,13 +113,11 @@ span {
     height: 40px;
     border: 3px solid #ff9000;
     border-radius: 6px;
-    
-    
 }
 
 .notCurrent {
-  color: #ff9000;
-  background-color: transparent;
+    color: #ff9000;
+    background-color: transparent;
 }
 
 .current {
