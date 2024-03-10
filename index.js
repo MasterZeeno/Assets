@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", event => {
         player.append(player_source);
 
         player.addEventListener("click", function () {
-            if (player.paused && player.readyState > 0) {
+            if (player.paused && player.readyState > 1) {
                 player.play();
                 // pauseOthers(player);
                 lastPlayedVideo = player;
