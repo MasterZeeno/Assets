@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", event => {
 
         player.onplaying = function () {
             lastPlayedVideo = player;
-            
         };
 
         player.oncanplay = function () {
