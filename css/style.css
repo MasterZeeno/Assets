@@ -133,6 +133,11 @@ span {
     user-select: none;
     webkit-user-select: none;
 }
+
+.pager > *:hover {
+  color: white;
+}
+
 .current {
     color: white !important;
     line-height: 1.5 !important;
