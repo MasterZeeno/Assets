@@ -39,17 +39,15 @@ document.addEventListener("DOMContentLoaded", event => {
 
     function toggleFullScreen(video) {
         if (video) {
-            
-                video.requestFullscreen();
-            
+            video.requestFullscreen();
             if (screen.orientation.type.startsWith("portrait")) {
                 screen.orientation.lock("landscape");
             }
         } else if (document.exitFullscreen) {
             document.exitFullscreen();
         } else {
-                document.fullscreenElement.requestFullscreen();
-            }
+            document.fullscreenElement.requestFullscreen();
+        }
         // video.classList.toggle("fullScreen", !document.fullscreenElement);
     }
 
