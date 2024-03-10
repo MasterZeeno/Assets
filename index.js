@@ -114,8 +114,9 @@ document.addEventListener("DOMContentLoaded", event => {
                         pager.append(curr);
                     }
                     if (currentPage < lastPage) {
-                        const last = document.createElement("button");
-                        last.innerText = "Next";
+                        const next = document.createElement("button");
+                        next.innerText = "Next";
+                        next.setAttribute("type", "submit");
                         pager.append(last);
                     }
                 }
