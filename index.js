@@ -67,14 +67,7 @@ document.addEventListener("DOMContentLoaded", event => {
                 this.play();
                 this.classList.remove("notplaying");
 
-                const videos = document.querySelectorAll("video");
-
-                videos.forEach(otherVideo => {
-                    if (otherVideo !== this && !otherVideo.paused) {
-                        otherVideo.pause();
-                        otherVideo.classList.add("notplaying");
-                    }
-                });
+                pauseOthers(this)
                 toggleFullScreen(this);
                 lastPlayedVideo = this;
             } else {
