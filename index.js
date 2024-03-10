@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     if (String(step) == String(currPage)) {
                         items.classList.add("current");
                     } else {
-                      items.classList.add("notCurrent");
+                        items.classList.add("notCurrent");
                     }
                     pager.append(items);
                 }
