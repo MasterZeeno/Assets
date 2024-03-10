@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", event => {
                 this.pause();
                 this.classList.add("notplaying");
             }
-            
         });
         videoList.append(player);
     }
