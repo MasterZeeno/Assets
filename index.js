@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", event => {
     const videoList = document.querySelector(".video-list");
 
     let lastPlayedVideo;
+    let videos;
 
     function splitName(name) {
         const names = name.includes(" ")
