@@ -55,18 +55,5 @@ window.addEventListener("DOMContentLoaded", event => {
             });
         });
 
-    function handleVideoPlayPause(video) {
-        if (video.paused) {
-            video.play();
-            const videos = document.querySelectorAll("video");
-
-            videos.forEach(otherVideo => {
-                if (otherVideo !== video && !otherVideo.paused) {
-                    otherVideo.pause();
-                }
-            });
-        } else {
-            video.pause();
-        }
-    }
+    
 });
