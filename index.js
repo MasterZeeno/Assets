@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", event => {
                 name.substring(halfLen + 1, name.length)
             ];
         }
-        name1.innerText=names[0];
-        name2.innerText=names[1];
+        name1.innerText = names[0];
+        name2.innerText = names[1];
     }
 
     const videoList = document.querySelector(".video-list");
