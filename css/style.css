@@ -32,6 +32,16 @@ h1 {
     margin: 30px auto;
 }
 
+video,
+img {
+    font-size: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: transparent;
+}
+
+
 video {
     will-change: border;
     transition: border 300ms ease;
@@ -50,15 +60,6 @@ video {
     border: none;
     border-top: 3px solid rgb(255 255 255 / 30%);
     border-bottom: 3px solid rgb(255 255 255 / 30%);
-}
-
-video,
-img {
-    font-size: 0;
-    width: 100%;
-    height: auto;
-    display: block;
-    background-color: transparent;
 }
 
 .video-list {
