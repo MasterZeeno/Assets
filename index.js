@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", event => {
     function createVideoJs(video_source, image_source) {
         const player = document.createElement("video");
         const attributes = {
-            class: "notplaying",
+            class: "notready",
             poster: image_source,
             autoplay: "false",
             preload: "metadata",
@@ -102,10 +102,10 @@ document.addEventListener("DOMContentLoaded", event => {
         player.onseeked = function () {
             player.play();
         };
-        
-        player.oncanplay = function() {
-    alert("Can start playing video");
-};
+
+        player.oncanplay = function () {
+            player.
+        };
 
         // player.addEventListener("dblclick", function () {
         //             lastPlayedVideo = player;
