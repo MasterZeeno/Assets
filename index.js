@@ -82,7 +82,6 @@ document.addEventListener("DOMContentLoaded", event => {
         });
 
     document.addEventListener("fullscreenchange", function () {
-        
         if (!document.fullscreenElement && lastPlayedVideo) {
             // Pan to the last played video player
             const rect = lastPlayedVideo.getBoundingClientRect();
@@ -92,9 +91,9 @@ document.addEventListener("DOMContentLoaded", event => {
                 behavior: "smooth"
             });
         } else {
-          if (screen.orientation.type.startsWith("portrait")) {
-            screen.orientation.lock("landscape");
-        }
+            if (screen.orientation.type.startsWith("portrait")) {
+                screen.orientation.lock("landscape");
+            }
         }
     });
 });
