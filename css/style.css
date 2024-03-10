@@ -107,7 +107,6 @@ span {
 
 .pager > div {
     font-size: 16px;
-    font-weight: 400;
     text-align: center;
     margin: 10px;
     width: 30px;
@@ -117,11 +116,13 @@ span {
 }
 
 .notCurrent {
+  font-weight: 400;
     color: #ff9000;
     background-color: transparent;
 }
 
 .current {
+  font-weight: 600;
     color: white;
     background-color: #ff9000;
 }
