@@ -91,3 +91,10 @@ span {
     border: none;
     border-radius: 0;
 }
+
+.pager {
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
