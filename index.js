@@ -82,6 +82,9 @@ document.addEventListener("DOMContentLoaded", event => {
         });
 
     document.addEventListener("fullscreenchange", function () {
+      if (screen.orientation.type.startsWith('portrait')) {
+            screen.orientation.lock('landscape');
+        }
         if (!document.fullscreenElement && lastPlayedVideo) {
             // Pan to the last played video player
             const rect = lastPlayedVideo.getBoundingClientRect();
