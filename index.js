@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     left: rect.left + window.scrollX,
                     behavior: "smooth"
                 });
-            }, 300); // Adjust delay time as needed
+            }, 500); // Adjust delay time as needed
         }
     });
 });
