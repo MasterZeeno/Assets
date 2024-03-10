@@ -67,6 +67,9 @@ img,
 
 .name {
     flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .name1 {
