@@ -12,6 +12,13 @@ window.addEventListener("DOMContentLoaded", event => {
 
     const videoList = document.querySelector(".video-list");
 
+    url ="https://script.google.com/macros/s/AKfycbx__TeLYl-rasvQ2msCnxNI7MpZB4BBp2Xmm-ZcTppgvRnrc4uQnCGWyUZlk5mppcD9/exec"
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+    });
+
     function createVideoJs(source) {
         const player = document.createElement("video");
         // player.setAttribute("class", "video-js vjs-fluid vjs-controls-enabled vjs-touch-enabled");
