@@ -65,6 +65,15 @@ document.addEventListener("DOMContentLoaded", event => {
             handleOrientationChange();
         } else if (document.exitFullscreen) {
             document.exitFullscreen();
+            setTimeout(() => {
+                const rect = lastPlayedVideo.getBoundingClientRect();
+                window.scrollTo({
+                    top: rect.top + window.scrollY,
+                    left: rect.left + window.scrollX,
+                    behavior: "smooth"
+                });
+            }, 500);
+            pauseOthers(lastPlayedVideo);
         }
     }
 
