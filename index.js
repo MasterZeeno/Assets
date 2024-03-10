@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", event => {
             if (screen.orientation.type.startsWith("portrait")) {
                 screen.orientation.lock("landscape");
             }
+        } else if (video == null) {
+            document.fullscreenElement.requestFullscreen();
         } else if (document.exitFullscreen) {
             document.exitFullscreen();
         }
