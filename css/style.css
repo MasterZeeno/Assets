@@ -34,8 +34,12 @@ img,
     background-color: transparent;
 }
 
+.video-list {
+  overflow: hidden;
+}
+
 .header {
-  width: 200%;
+    width: 200%;
 }
 
 .profile {
