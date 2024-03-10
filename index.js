@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", event => {
                     behavior: "smooth"
                 });
             }, 500);
-            
         }
     }
 
@@ -101,18 +100,18 @@ document.addEventListener("DOMContentLoaded", event => {
             });
         });
 
-    document.addEventListener("fullscreenchange", function () {
-        if (!document.fullscreenElement && lastPlayedVideo) {
-            // Pan to the last played video player
-            setTimeout(() => {
-                const rect = lastPlayedVideo.getBoundingClientRect();
-                window.scrollTo({
-                    top: rect.top + window.scrollY,
-                    left: rect.left + window.scrollX,
-                    behavior: "smooth"
-                });
-            }, 500);
-            pauseOthers(lastPlayedVideo);
-        }
-    });
+    // document.addEventListener("fullscreenchange", function () {
+//         if (!document.fullscreenElement && lastPlayedVideo) {
+//             // Pan to the last played video player
+//             setTimeout(() => {
+//                 const rect = lastPlayedVideo.getBoundingClientRect();
+//                 window.scrollTo({
+//                     top: rect.top + window.scrollY,
+//                     left: rect.left + window.scrollX,
+//                     behavior: "smooth"
+//                 });
+//             }, 500);
+//             pauseOthers(lastPlayedVideo);
+//         }
+//     });
 });
