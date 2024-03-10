@@ -36,8 +36,7 @@ video {
 }
 
 video,
-img,
-.video-list {
+img {
     font-size: 0;
     width: 100%;
     height: auto;
@@ -46,7 +45,7 @@ img,
     background-color: transparent;
 }
 
-.video-list{
+.video-list {
     overflow-x: hidden !important;
     width: 100%;
     background-color: rgb(0 0 0 / 30%);
