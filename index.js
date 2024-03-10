@@ -102,8 +102,8 @@ document.addEventListener("DOMContentLoaded", event => {
 
                 if (currPage && currPage == 1) {
                     const prev = document.createElement("div");
-                  prev.innerText="<<"
-                  pager.append(prev);
+                    prev.innerText = "<<";
+                    pager.append(prev);
                 }
                 for (let step = 0; step <= 2; step++) {
                     const items = document.createElement("div");
