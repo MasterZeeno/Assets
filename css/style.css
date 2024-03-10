@@ -73,6 +73,7 @@ img,
     -webkit-filter: grayscale(69%) blur(2px); /* Safari 6.0 - 9.0 */
     filter: grayscale(69%) blur(2px);
     border: none;
+    border-radius: 0;
 }
 
 .name {
