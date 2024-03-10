@@ -39,6 +39,15 @@ document.addEventListener("DOMContentLoaded", event => {
             screen.orientation.lock("landscape");
         }
     }
+    
+    function pauseOthers(currentVid){
+      videos.forEach(otherVideo => {
+                    if (otherVideo !== currentVid && !otherVideo.paused) {
+                        otherVideo.pause();
+                        otherVideo.classList.add("notplaying");
+                    }
+                });
+    }
 
     function createVideoJs(video_source, image_source) {
         const player = document.createElement("video");
