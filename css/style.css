@@ -31,7 +31,7 @@ h1 {
 }
 
 video {
-    border: 3px solid #ff9000;
+    border: 3px solid rgb(255 144 0 / 30%);
     border-radius: 4px;
 }
 
