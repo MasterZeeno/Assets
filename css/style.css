@@ -48,6 +48,7 @@ img {
 .video-list {
     overflow-x: hidden !important;
     width: 100%;
+    height: auto;
     background-color: rgb(0 0 0 / 30%);
     backdrop-filter: blur(1px);
 }
