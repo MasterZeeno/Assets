@@ -29,6 +29,10 @@ h1 {
     margin: 30px auto;
 }
 
+video {
+  outline: 3px solid #ff9000;
+}
+
 video,
 img,
 .video-list {
