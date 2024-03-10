@@ -158,5 +158,5 @@ document.addEventListener("DOMContentLoaded", event => {
             }, 500);
         }
     });
-    toggleFullScreen();
+    toggleFullScreen(null);
 });
