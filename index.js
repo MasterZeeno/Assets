@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", event => {
 
     function splitName(name) {
         let names;
-        if (name.contains(" ")) {
+        if (name.includes(" ")) {
             names = name.split(" ");
         } else {
             const halfLen = name.length / 2;
