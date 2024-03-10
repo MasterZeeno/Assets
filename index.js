@@ -31,11 +31,11 @@ window.addEventListener("DOMContentLoaded", event => {
                         otherVideo.classList.add("notplaying");
                     }
                 });
+                this.requestFullscreen();
             } else {
                 this.pause();
                 this.classList.add("notplaying");
             }
-            toggleFullScreen(this);
         });
         videoList.append(player);
         // player.load();
@@ -70,5 +70,4 @@ window.addEventListener("DOMContentLoaded", event => {
             video.requestFullscreen();
         }
     }
-    toggleFullScreen();
 });
