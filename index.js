@@ -72,6 +72,12 @@ document.addEventListener("DOMContentLoaded", event => {
                 this.pause();
                 this.classList.add("notplaying");
             }
+            if (video.playing) {
+  // Video is currently playing
+} else {
+  // Video is paused or has ended
+}
+
         });
         videoList.append(player);
     }
