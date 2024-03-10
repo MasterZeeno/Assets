@@ -55,8 +55,8 @@ video {
     opacity: 0.69;
     mix-blend-mode: darken;
     border: none;
-    border-top: 3px solid rgb(255 255 255 / 30%);
-    border-bottom: 3px solid rgb(255 255 255 / 30%);
+    border-top-color: rgb(255 255 255 / 30%);
+    border-bottom-color: rgb(255 255 255 / 30%);
 }
 
 .video-list {
