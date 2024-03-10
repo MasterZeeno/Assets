@@ -13,7 +13,8 @@ body {
     background-color: black;
 }
 
-.video-list {
+.video-list,
+video {
     width: 100%;
     height: auto;
 }
