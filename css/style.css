@@ -16,7 +16,9 @@ body {
 
 body {
     will-change: opacity;
-    transition: opacity 1s ease-in-out;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
