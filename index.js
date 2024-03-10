@@ -1,43 +1,61 @@
 window.addEventListener("DOMContentLoaded", event => {
     const video_type = "application/vnd.apple.mpegurl";
-    const video_src = [
-        "https://surrit.com:443/e472ea27-4567-40e7-ae93-afaf0dad32ba/1920x1080/video.m3u8",
-        "https://surrit.com:443/ae1bc5e3-3cc3-4bc5-9baa-eeef9e30130c/1920x1080/video.m3u8",
-        "https://surrit.com:443/ebd0252a-5495-4118-9697-a41640d82aba/1920x1080/video.m3u8",
-        "https://surrit.com:443/aaed0cc7-05fa-4fcf-ac50-a7353d7f5303/1280x720/video.m3u8",
-        "https://surrit.com:443/bb6e5e41-c2e7-4433-96d8-afd8f488157c/1280x720/video.m3u8",
-        "https://surrit.com:443/f8cbf25c-619e-44dd-83d4-61050bb2e1d8/1280x720/video.m3u8",
-        "https://surrit.com:443/fefc6090-8775-4654-8a5e-200641c9622d/1280x720/video.m3u8"
-    ];
+
+    const header = document.querySelector(".header");
+    const profile = document.querySelector(".profile");
+    const name = document.querySelector(".name");
 
     const videoList = document.querySelector(".video-list");
 
-    url ="https://script.google.com/macros/s/AKfycbx__TeLYl-rasvQ2msCnxNI7MpZB4BBp2Xmm-ZcTppgvRnrc4uQnCGWyUZlk5mppcD9/exec"
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-    });
-
-    function createVideoJs(source) {
+    function createVideoJs(video_source, image_source) {
         const player = document.createElement("video");
-        // player.setAttribute("class", "video-js vjs-fluid vjs-controls-enabled vjs-touch-enabled");
-        player.setAttribute("controls", "");
+        player.setAttribute("poster", image_source);
+        // player.setAttribute("controls", "");
         player.setAttribute("autoplay", "");
-        player.setAttribute("muted", "true");
+        player.setAttribute("muted", "false");
         player.setAttribute("name", "media");
-        // player.setAttribute("loop", "");
-        // player.setAttribute("preload", "metadata");
         const player_source = document.createElement("source");
-        player_source.setAttribute("src", source);
+        player_source.setAttribute("src", video_source);
         player_source.setAttribute("type", video_type);
-        // player.setAttribute("data-setup", "{}");
         player.append(player_source);
+        player.addEventListener("click", function () {
+            if (player.paused) {
+                player.play();
+                const videos = document.querySelectorAll("video");
+                videos.forEach(video => {
+                    if (video !== player && !video.paused) {
+                        video.pause();
+                    }
+                });
+            } else {
+                player.pause();
+            }
+        });
         videoList.append(player);
-        player.load();
+        // player.load();
     }
-    
-    video_src.forEach(v_src => {
-        createVideoJs(v_src);
-    });
+
+    url =
+        "https://script.google.com/macros/s/AKfycbx__TeLYl-rasvQ2msCnxNI7MpZB4BBp2Xmm-ZcTppgvRnrc4uQnCGWyUZlk5mppcD9/exec";
+
+    fetch(url)
+        .then(response => response.json())
+        .then(res => {
+            header.setAttribute("src", res.header);
+
+            profile.setAttribute("src", res.profile);
+
+            name.innerText = res.name;
+
+            res.urls.forEach(e => {
+                if (e.video_url && e.image_url) {
+                    createVideoJs(e.video_url, e.image_url);
+                }
+            });
+        });
+
+    // video_src.forEach((v_src, index) => {
+    //         i_src = image_src[index];
+    //         createVideoJs(v_src, i_src);
+    //     });
 });
