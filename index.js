@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", event => {
     const videoList = document.querySelector(".video-list");
     let lastPlayedVideo;
 
-    function toggleFullScreen() {
+    function toggleFullScreen(video) {
         if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen();
+            video.requestFullscreen();
             handleOrientationChange();
         } else if (document.exitFullscreen) {
             document.exitFullscreen();
