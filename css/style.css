@@ -36,7 +36,7 @@ img,
 }
 
 .video-list {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .header {
