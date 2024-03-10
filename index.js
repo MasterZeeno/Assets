@@ -95,14 +95,6 @@ document.addEventListener("DOMContentLoaded", event => {
             pauseOthers(player);
         };
 
-        player.onseeking = function () {
-            player.pause();
-        };
-
-        player.onseeked = function () {
-            player.play();
-        };
-
         player.oncanplay = function () {
             setTimeout(() => {
                 player.classList.remove("notready");
