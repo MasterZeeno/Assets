@@ -102,7 +102,7 @@ span {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0 0 0 / 30%);;
+    background-color: rgb(0 0 0 / 30%);
     backdrop-filter: blur(4px);
 }
 
