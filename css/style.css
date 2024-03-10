@@ -118,7 +118,6 @@ span {
 
 .pager > * {
     font-size: 16px;
-    line-height: 2;
     text-align: center;
     vertical-align: middle;
     margin: 0 8px;
@@ -135,6 +134,7 @@ span {
     color: #ff9000;
     background-color: rgb(0 0 0 / 30%);
     border: none;
+    line-height: 2;
 }
 
 .pager > *:not(.current):hover {
