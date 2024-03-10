@@ -60,6 +60,7 @@ window.addEventListener("DOMContentLoaded", event => {
     //     });
 });
 
+window.addEventListener("load", event => {
 // Get all the video elements
 const videos = document.querySelectorAll("video");
 
@@ -86,4 +87,5 @@ const observer = new IntersectionObserver(
 // Observe each video
 videos.forEach(video => {
     observer.observe(video);
+});
 });
