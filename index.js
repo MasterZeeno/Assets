@@ -80,25 +80,34 @@ document.addEventListener("DOMContentLoaded", event => {
 
     fetch(url)
         .then(response => response.json())
-        .then(({ header: headerImg, profile: profileImg, name, currPage, lastPage, urls }) => {
-            header.style.backgroundImage = `url('${headerImg}')`;
-            profile.setAttribute("src", profileImg);
-            splitName(name);
+        .then(
+            ({
+                header: headerImg,
+                profile: profileImg,
+                name,
+                currPage,
+                lastPage,
+                urls
+            }) => {
+                header.style.backgroundImage = `url('${headerImg}')`;
+                profile.setAttribute("src", profileImg);
+                splitName(name);
 
-            urls.forEach(({ video_url, image_url }) => {
-                if (video_url && image_url) {
-                    createVideoJs(video_url, image_url);
+                urls.forEach(({ video_url, image_url }) => {
+                    if (video_url && image_url) {
+                        createVideoJs(video_url, image_url);
+                    }
+                });
+
+                for (let step = currPage; step <= lastPage; step++) {
+                    // Runs 5 times, with values of step 0 through 4.
+                    console.log("Walking east one step");
                 }
-            });
-            
-            for (let step = 0; step < 5; step++) {
-  // Runs 5 times, with values of step 0 through 4.
-  console.log("Walking east one step");
-}
 
-            // Query for all videos after they are added to the DOM
-            videos = document.querySelectorAll("video");
-        });
+                // Query for all videos after they are added to the DOM
+                videos = document.querySelectorAll("video");
+            }
+        );
 
     document.addEventListener("fullscreenchange", function () {
         if (!document.fullscreenElement && lastPlayedVideo) {
