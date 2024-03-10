@@ -103,6 +103,7 @@ span {
     justify-content: center;
     align-items: center;
     background-color: black;
+    backdrop-filter: blur(4px);
 }
 
 .pager > div {
