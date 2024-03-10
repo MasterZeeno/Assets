@@ -16,6 +16,11 @@ body {
     color: white;
     font-size: 16px;
     overflow-x: hidden !important;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
 }
 
 h1 {
