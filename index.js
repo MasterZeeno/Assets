@@ -101,7 +101,8 @@ document.addEventListener("DOMContentLoaded", event => {
                 });
 
                 for (let step = currPage; step <= lastPage; step++) {
-                    document.createElement("div").innerText = step;
+                    const items = document.createElement("div").innerText = step;
+                    pager.append(items)
                 }
 
                 // Query for all videos after they are added to the DOM
