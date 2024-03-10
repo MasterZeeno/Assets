@@ -114,19 +114,20 @@ span {
     margin: 0 10px;
     width: 30px;
     height: 30px;
-    border: 3px solid #ff9000;
+    border: 3px solid rgb(255 144 0 / 30%);
     border-radius: 6px;
+    backdrop-filter: blur(4px);
 }
 
 .notCurrent {
     font-weight: 400;
     color: #ff9000;
     background-color: rgb(0 0 0 / 30%);
-    backdrop-filter: blur(4px);
+    
 }
 
 .current {
     font-weight: 600;
     color: white;
-    background-color: rgb(255 144 0 / 30%);;
+    background-color: rgb(255 144 0 / 30%);
 }
