@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", event => {
     const video_type = "application/vnd.apple.mpegurl";
 
-    const Z = document.querySelectorAll(".Z");
+    const Z = document.querySelectorAll("div");
 
     const header = document.querySelector(".header");
     const profile = document.querySelector(".profile");
