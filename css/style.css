@@ -106,6 +106,7 @@ span {
 }
 
 .pager > div {
+  font-size: 25px;
     text-align: center;
     margin: 0 5px;
     width: 50px;
