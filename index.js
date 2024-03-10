@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", event => {
             class: "notplaying",
             poster: image_source,
             autoplay: "false",
-            preload: "none",
+            preload: "metadata",
             name: "media"
         };
 
