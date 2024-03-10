@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", event => {
             if (this.paused) {
                 this.play();
                 this.classList.remove("notplaying");
-                
+
                 const videos = document.querySelectorAll("video");
 
                 videos.forEach(otherVideo => {
