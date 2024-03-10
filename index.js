@@ -100,8 +100,7 @@ document.addEventListener("DOMContentLoaded", event => {
                 });
 
                 for (let step = currPage; step <= lastPage; step++) {
-                    // Runs 5 times, with values of step 0 through 4.
-                    console.log("Walking east one step");
+                    document.createElement('div');
                 }
 
                 // Query for all videos after they are added to the DOM
