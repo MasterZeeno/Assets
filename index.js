@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", event => {
         ) {
             video.requestFullscreen();
             screen.orientation.lock("landscape");
-            
         } else if (document.exitFullscreen) {
             document.exitFullscreen();
         }
