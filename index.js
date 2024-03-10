@@ -70,6 +70,7 @@ window.addEventListener("load", event => {
             entries.forEach(entry => {
                 // If the video is in the viewport, play it
                 if (entry.isIntersecting) {
+                    console.log(entry.target.name);
                     entry.target.play();
                 }
                 // If the video is not in the viewport, pause it
