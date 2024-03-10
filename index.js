@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", event => {
                 }
             });
         });
-    function toggleFullScreen() {
+    function toggleFullScreen(video) {
         if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen();
         } else if (document.exitFullscreen) {
