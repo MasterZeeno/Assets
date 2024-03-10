@@ -64,8 +64,8 @@ img,
 
 .notplaying {
     opacity: 0.69;
-    -webkit-filter: grayscale(69%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(69%);
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
 
 .name {
