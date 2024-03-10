@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", event => {
 
     function createVideoJs(video_source, image_source) {
         const player = document.createElement("video");
+player.setAttribute("class", ".notplaying");
         player.setAttribute("poster", image_source);
         // player.setAttribute("controls", "");
         player.setAttribute("autoplay", "");
