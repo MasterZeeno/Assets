@@ -42,34 +42,19 @@ window.addEventListener("load", event => {
             });
         });
 
-    const videos = document.querySelectorAll("video");
-
-    // Function to check if an element is in the center of the viewport
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <=
-                (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <=
-                (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    // Function to play or pause videos based on center alignment
     function handleVideoPlayPause(video) {
-        if (isElementInViewport(video)) {
+       
             if (video.paused) {
                 video.play();
+                const videos = document.querySelectorAll("video");
+
                 videos.forEach(otherVideo => {
                     if (otherVideo !== video && !otherVideo.paused) {
                         otherVideo.pause();
                     }
                 });
-            }
-        } else {
+            } else {
             video.pause();
-        }
-    }
+        };
+    
 });
