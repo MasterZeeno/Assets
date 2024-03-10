@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", event => {
     const name = document.querySelector(".name");
 
     const videoList = document.querySelector(".video-list");
-    
+
     function toggleFullScreen() {
         if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen();
@@ -68,5 +68,4 @@ document.addEventListener("DOMContentLoaded", event => {
             });
             toggleFullScreen();
         });
-    
 });
