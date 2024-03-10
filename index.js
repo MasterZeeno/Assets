@@ -61,10 +61,10 @@ window.addEventListener("DOMContentLoaded", event => {
         });
 });
 
-document.addEventListener("DOMContentLoaded", event => {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-  }
+document.addEventListener("load", event => {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+    }
 });
