@@ -90,6 +90,19 @@ document.addEventListener("DOMContentLoaded", event => {
             }
             player.classList.toggle("notplaying", player.paused);
         });
+        
+        player.addEventListener("dblclick", function () {
+            if (player.paused && player.readyState > 0) {
+                player.play();
+                // pauseOthers(player);
+                lastPlayedVideo = player;
+                toggleFullScreen(player);
+            } else {
+                player.pause();
+            }
+            player.classList.toggle("notplaying", player.paused);
+        });
+        
         videoList.append(player);
     }
 
