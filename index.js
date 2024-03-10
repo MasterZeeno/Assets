@@ -110,6 +110,10 @@ document.addEventListener("DOMContentLoaded", event => {
                     prev.innerText = currPage;
                     pager.append(curr);
                 }
+                if(currPage<lastPage){
+                  const last = document.createElement("div");
+                    prev.innerText = ">>";
+                    pager.append(last);
                 }
                 }
 
