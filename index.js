@@ -83,7 +83,6 @@ document.addEventListener("DOMContentLoaded", event => {
             if (player.paused && player.readyState > 1) {
                 player.play();
                 // pauseOthers(player);
-                
             } else {
                 player.pause();
             }
