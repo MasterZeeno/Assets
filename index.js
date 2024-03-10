@@ -20,7 +20,6 @@ window.addEventListener("DOMContentLoaded", event => {
         player_source.setAttribute("type", video_type);
         player.append(player_source);
         player.addEventListener("click", function () {
-            
             if (this.paused) {
                 this.play();
                 this.classList.remove("notplaying");
