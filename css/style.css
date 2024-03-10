@@ -44,7 +44,7 @@ img {
 video {
     will-change: border-color;
     transition: border 300ms ease;
-    border-width: 4px;
+    border-width: 3px;
     border-style: solid;
     border-color: #ff9000;
     border-radius: 4px;
@@ -53,8 +53,6 @@ video {
 
 .notplaying {
     opacity: 0.69;
-    /* -webkit-filter: grayscale(69%) blur(1px);
-    filter: grayscale(69%) blur(1px); */
     mix-blend-mode: darken;
     border: none;
     border-top: 3px solid rgb(255 255 255 / 30%);
