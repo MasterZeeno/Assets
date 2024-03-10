@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", event => {
 
     fetch(url)
         .then(response => response.json())
-        .then(({ header: headerImg, profile: profileImg, name, urls }) => {
+        .then(({ header: headerImg, profile: profileImg, name, currPage, lastPage, urls }) => {
             header.style.backgroundImage = `url('${headerImg}')`;
             profile.setAttribute("src", profileImg);
             splitName(name);
