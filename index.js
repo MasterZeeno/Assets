@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", event => {
         player_source.setAttribute("type", video_type);
         player.append(player_source);
         player.addEventListener("click", function () {
-            if (this.paused) {
-                this.play();
-                this.classList.remove("notplaying");
+            if (player.paused) {
+                player.play();
+                player.classList.remove("notplaying");
                 pauseOthers(player);
-                toggleFullScreen(this);
-                lastPlayedVideo = this;
+                toggleFullScreen(player);
+                lastPlayedVideo = player;
             } else {
                 this.pause();
                 this.classList.add("notplaying");
