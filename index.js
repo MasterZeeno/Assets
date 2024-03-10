@@ -99,22 +99,22 @@ document.addEventListener("DOMContentLoaded", event => {
                         createVideoJs(video_url, image_url);
                     }
                 });
-                if(currPage){
-                if (currPage >1) {
-                    const prev = document.createElement("div");
-                    prev.innerText = "<<";
-                    pager.append(prev);
-                }
-                if(currPage>=1 && currPage <= lastPage){
-                  const curr = document.createElement("div");
-                    prev.innerText = currPage;
-                    pager.append(curr);
-                }
-                if(currPage<lastPage){
-                  const last = document.createElement("div");
-                    prev.innerText = ">>";
-                    pager.append(last);
-                }
+                if (currPage) {
+                    if (currPage > 1) {
+                        const prev = document.createElement("div");
+                        prev.innerText = "<<";
+                        pager.append(prev);
+                    }
+                    if (currPage >= 1 && currPage <= lastPage) {
+                        const curr = document.createElement("div");
+                        prev.innerText = currPage;
+                        pager.append(curr);
+                    }
+                    if (currPage < lastPage) {
+                        const last = document.createElement("div");
+                        prev.innerText = ">>";
+                        pager.append(last);
+                    }
                 }
 
                 // Query for all videos after they are added to the DOM
