@@ -40,7 +40,8 @@ img,
 }
 
 .header {
-    width: 200%;
+    background-size: 200%;
+    background-position: center;
 }
 
 .profile {
