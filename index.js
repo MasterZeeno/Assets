@@ -47,6 +47,9 @@ document.addEventListener("DOMContentLoaded", event => {
                     }
                 });
                 this.requestFullscreen();
+                if (screen.orientation.type.startsWith("portrait")) {
+                screen.orientation.lock("landscape");
+            }
                 lastPlayedVideo = this;
             } else {
                 this.pause();
