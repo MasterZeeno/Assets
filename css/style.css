@@ -54,7 +54,8 @@ video {
 .notplaying {
     opacity: 0.69;
     mix-blend-mode: darken;
-    border: none;
+    border-left-width: 0;
+    border-right-width: 0;
     border-top-color: rgb(255 255 255 / 30%);
     border-bottom-color: rgb(255 255 255 / 30%);
 }
