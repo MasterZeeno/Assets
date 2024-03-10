@@ -102,6 +102,10 @@ document.addEventListener("DOMContentLoaded", event => {
         player.onseeked = function () {
             player.play();
         };
+        
+        player.oncanplay = function() {
+    alert("Can start playing video");
+};
 
         // player.addEventListener("dblclick", function () {
         //             lastPlayedVideo = player;
