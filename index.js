@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", event => {
     const header = document.querySelector(".header");
     const profile = document.querySelector(".profile");
     const name = document.querySelector(".name");
+    const name1 = document.querySelector(".name1");
+    const name2 = document.querySelector(".name2");
 
     const videoList = document.querySelector(".video-list");
     let lastPlayedVideo;
