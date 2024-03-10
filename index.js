@@ -1,4 +1,4 @@
-window.addEventListener("load", event => {
+window.addEventListener("DOMContentLoaded", event => {
     const video_type = "application/vnd.apple.mpegurl";
 
     const header = document.querySelector(".header");
