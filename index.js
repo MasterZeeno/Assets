@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", event => {
             "fullScreen",
             document.fullscreenElement
         );
-        pauseOthers(lastPlayedVideo);
+        // pauseOthers(lastPlayedVideo);
         if (!document.fullscreenElement && lastPlayedVideo) {
             setTimeout(() => {
                 const rect = lastPlayedVideo.getBoundingClientRect();
