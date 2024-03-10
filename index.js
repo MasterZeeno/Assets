@@ -13,7 +13,10 @@ document.addEventListener("DOMContentLoaded", event => {
             names = name.split(" ");
         } else {
             const halfLen = name.length / 2;
-            names = [name.substring(0, halfLen), name.substring(halfLen+1, name.length)];
+            names = [
+                name.substring(0, halfLen),
+                name.substring(halfLen + 1, name.length)
+            ];
         }
     }
 
