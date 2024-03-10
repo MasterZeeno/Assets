@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", event => {
                 const videos = document.querySelectorAll("video");
 
                 videos.forEach(otherVideo => {
-                    if (otherVideo !== this && !otherVideo.paused) {
+                    if (otherVideo !== this && otherVideo.playing) {
                         otherVideo.pause();
                         otherVideo.classList.add("notplaying");
                     }
@@ -68,10 +68,10 @@ document.addEventListener("DOMContentLoaded", event => {
             }
             if (this.playing) {
                 this.classList.remove("notplaying");
-                setTimeout(() => {
+                
                     toggleFullScreen(this);
                     lastPlayedVideo = this;
-                }, 300);
+               
             } else {
                 this.classList.add("notplaying");
             }
