@@ -76,8 +76,8 @@ img {
 }
 
 .notplaying {
-    /* opacity: 0.69;
-    -webkit-filter: grayscale(69%) blur(1px);
+    opacity: 0.69;
+    /* -webkit-filter: grayscale(69%) blur(1px);
     filter: grayscale(69%) blur(1px); */
     border: none;
     border-top: 3px solid rgb(0 0 0 / 30%);
