@@ -81,6 +81,7 @@ window.addEventListener("load", event => {
         videos.forEach(video => {
             if (isElementInViewport(video)) {
                 video.play();
+                video.click()
             } else {
                 video.pause();
             }
