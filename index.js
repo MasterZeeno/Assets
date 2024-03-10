@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", event => {
     function toggleFullScreen(video) {
         if (!document.fullscreenElement) {
             video.requestFullscreen();
-            video.classList.add("fullScreen")
+            video.classList.add("fullScreen");
             if (screen.orientation.type.startsWith("portrait")) {
                 screen.orientation.lock("landscape");
             }
