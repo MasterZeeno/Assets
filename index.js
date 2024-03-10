@@ -91,7 +91,10 @@ document.addEventListener("DOMContentLoaded", event => {
                 }
             });
             
-            for()
+            for (let step = 0; step < 5; step++) {
+  // Runs 5 times, with values of step 0 through 4.
+  console.log("Walking east one step");
+}
 
             // Query for all videos after they are added to the DOM
             videos = document.querySelectorAll("video");
