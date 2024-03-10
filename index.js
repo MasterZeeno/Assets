@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", event => {
                 this.classList.add("notplaying");
             }
         });
-        pauseOthers(null);
         videoList.append(player);
     }
 
