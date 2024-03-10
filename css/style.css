@@ -91,5 +91,5 @@ span {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    display: none;
+    /* display: none; */
 }
