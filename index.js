@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", event => {
     }
 
     // const exitFullscreenButton = document.createElement("button");
-//     exitFullscreenButton.innerText = "Exit Fullscreen";
-//     exitFullscreenButton.addEventListener("click", () => {
-//         if (document.exitFullscreen) {
-//             document.exitFullscreen();
-//         }
-//     });
+    //     exitFullscreenButton.innerText = "Exit Fullscreen";
+    //     exitFullscreenButton.addEventListener("click", () => {
+    //         if (document.exitFullscreen) {
+    //             document.exitFullscreen();
+    //         }
+    //     });
 
     url =
         "https://script.google.com/macros/s/AKfycbx__TeLYl-rasvQ2msCnxNI7MpZB4BBp2Xmm-ZcTppgvRnrc4uQnCGWyUZlk5mppcD9/exec";
