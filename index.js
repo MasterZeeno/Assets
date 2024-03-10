@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", event => {
             handleOrientationChange();
         } else if (document.exitFullscreen) {
             document.exitFullscreen();
+            pauseOthers(lastPlayedVideo);
             setTimeout(() => {
                 const rect = lastPlayedVideo.getBoundingClientRect();
                 window.scrollTo({
@@ -73,7 +74,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     behavior: "smooth"
                 });
             }, 500);
-            pauseOthers(lastPlayedVideo);
+            
         }
     }
 
