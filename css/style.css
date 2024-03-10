@@ -116,7 +116,7 @@ span {
     backdrop-filter: blur(4px);
 }
 
-.pager > div {
+.pager > button {
     font-size: 16px;
     line-height: 2;
     text-align: center;
