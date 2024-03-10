@@ -42,8 +42,8 @@ img {
 }
 
 video {
-    will-change: border, opacity, height, width;
-    transition-property: border, opacity, height, width;
+    will-change: border, opacity, height;
+    transition-property: border, opacity, height;
     transition-duration: 600ms;
     transition-timing-function: ease-in-out;
     border-width: 3px;
