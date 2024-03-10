@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", event => {
         if (name.includes(" ")) {
             names = name.split(" ");
         } else {
-            const halfLen = name.length / 2;
+            const halfLen = Math.ceil(name.length / 2);
             names = [
                 name.substring(0, halfLen),
                 name.substring(halfLen, name.length)
