@@ -7,6 +7,16 @@ document.addEventListener("DOMContentLoaded", event => {
     const name1 = document.querySelector(".name1");
     const name2 = document.querySelector(".name2");
 
+    function splitName(name) {
+        let names;
+        if (name.contains(" ")) {
+            names = name.split(" ");
+        } else {
+            const halfLen = name.length / 2;
+            names = [name.substring(0, halfLen), name.substring(halfLen+1, name.length)];
+        }
+    }
+
     const videoList = document.querySelector(".video-list");
     let lastPlayedVideo;
 
