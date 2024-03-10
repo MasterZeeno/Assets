@@ -58,8 +58,8 @@ window.addEventListener("load", event => {
     }
 
     // Function to play or pause videos based on center alignment
-    function handleVideoPlayPause() {
-        videos.forEach(video => {
+    function handleVideoPlayPause(video) {
+        
             if (isElementInViewport(video)) {
                 if (video.paused) {
                     video.play();
@@ -72,7 +72,7 @@ window.addEventListener("load", event => {
             } else {
                 video.pause();
             }
-        });
+        
     }
     // Event listener to handle scroll and resize events
     window.addEventListener("scroll", handleVideoPlayPause);
