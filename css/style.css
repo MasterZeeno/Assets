@@ -14,11 +14,14 @@ body {
     scrollbar-width: none;
 }
 
-body {
-    will-change: opacity, height, width;
+.Z {
+  will-change: opacity, height, width;
     transition-property: opacity, height, width;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
+}
+
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
