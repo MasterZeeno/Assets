@@ -18,7 +18,7 @@ window.addEventListener("load", event => {
         player_source.setAttribute("src", video_source);
         player_source.setAttribute("type", video_type);
         player.append(player_source);
-        player.addEventListener("click", handleVideoPlayPause);
+        player.addEventListener("click", handleVideoPlayPause(player));
         videoList.append(player);
         // player.load();
     }
