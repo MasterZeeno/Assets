@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", event => {
         player.setAttribute("controls", "");
         player.setAttribute("autoplay", "");
         player.setAttribute("muted", "");
-        player.setAttribute("loop", "");
+        // player.setAttribute("loop", "");
         // player.setAttribute("preload", "metadata");
         const player_source = document.createElement("source");
         player_source.setAttribute("src", source);
