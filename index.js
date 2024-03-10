@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     if (currentPage >= 1 && currentPage <= lastPage) {
                         const curr = document.createElement("button");
                         curr.classList.add("current");
-                        curr.innerText = currPage;
+                        curr.text = currPage;
                         pager.append(curr);
                     }
                     if (currentPage < lastPage) {
