@@ -45,8 +45,6 @@ document.addEventListener("DOMContentLoaded", event => {
             }
         } else if (document.exitFullscreen) {
             document.exitFullscreen();
-        } else {
-            document.fullscreenElement.requestFullscreen();
         }
         // video.classList.toggle("fullScreen", !document.fullscreenElement);
     }
