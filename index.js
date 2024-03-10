@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", event => {
             ];
         }
         name1.innerText = names[0];
-        name2.innerText = names[1] || '';
+        name2.innerText = names[1] || "";
     }
 
     const videoList = document.querySelector(".video-list");
