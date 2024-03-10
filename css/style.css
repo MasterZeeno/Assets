@@ -128,5 +128,5 @@ span {
 .current {
     font-weight: 600;
     color: white;
-    background-color: #ff9000;
+    background-color: rgb(255 144 0 / 30%);;
 }
