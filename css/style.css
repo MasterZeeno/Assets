@@ -1,0 +1,28 @@
+/* CSS styles for the video player */
+:root {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.video-list {
+    width: 100%;
+    height: auto;
+}
+
+.video-js {
+    font-size: 0;
+    padding: 0;
+    margin: 10% auto;
+    border: none;
+    display: block;
+    background-color: transparent;
+}
