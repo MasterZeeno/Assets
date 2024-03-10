@@ -160,6 +160,8 @@ document.addEventListener("DOMContentLoaded", event => {
                         pager.append(next);
                     }
                 }
+                
+                Z.classList.remove("Z");
 
                 // Query for all videos after they are added to the DOM
                 videos = document.querySelectorAll("video");
