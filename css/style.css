@@ -15,8 +15,8 @@ body {
 }
 
 body {
-    will-change: opacity;
-    transition-property: opacity;
+    will-change: opacity, height, width;
+    transition-property: opacity, height, width;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
     display: flex;
