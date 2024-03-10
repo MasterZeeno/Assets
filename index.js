@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", event => {
     const name1 = document.querySelector(".name1");
     const name2 = document.querySelector(".name2");
     const videoList = document.querySelector(".video-list");
-    const cover = document.querySelector(".cover");
     const pager = document.querySelector(".pager");
 
     let lastPlayedVideo;
@@ -101,7 +100,9 @@ document.addEventListener("DOMContentLoaded", event => {
                     }
                 });
 
-                cover.height(videoList.height);
+                const cover = document.createElement("div");
+                cover.classList.add("cover");
+                videoList.append(cover);
 
                 for (let step = currPage; step <= lastPage; step++) {
                     const items = document.createElement("div");
