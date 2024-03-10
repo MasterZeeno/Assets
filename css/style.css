@@ -34,6 +34,10 @@ img,
     background-color: transparent;
 }
 
+.header {
+  width: 200%;
+}
+
 .profile {
     position: absolute;
     top: 50px;
