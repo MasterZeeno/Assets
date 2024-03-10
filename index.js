@@ -59,21 +59,21 @@ window.addEventListener("DOMContentLoaded", event => {
 
     // Function to play or pause videos based on center alignment
     function handleVideoPlayPause() {
-    videos.forEach(video => {
-        if (isElementInViewport(video)) {
-            if (video.paused) {
-                video.play();
-                videos.forEach(otherVideo => {
-                    if (otherVideo !== video && !otherVideo.paused) {
-                        otherVideo.pause();
-                    }
-                });
+        videos.forEach(video => {
+            if (isElementInViewport(video)) {
+                if (video.paused) {
+                    video.play();
+                    videos.forEach(otherVideo => {
+                        if (otherVideo !== video && !otherVideo.paused) {
+                            otherVideo.pause();
+                        }
+                    });
+                }
+            } else {
+                video.pause();
             }
-        } else {
-            video.pause();
-        }
-    });
-}
+        });
+    }
     // Event listener to handle scroll and resize events
     window.addEventListener("scroll", handleVideoPlayPause);
     window.addEventListener("resize", handleVideoPlayPause);
