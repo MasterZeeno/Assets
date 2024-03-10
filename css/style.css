@@ -51,6 +51,48 @@ video {
     mix-blend-mode: none;
 }
 
+/* Hide controls in fullscreen */
+video:-webkit-full-screen::-webkit-media-controls {
+  display: none !important;
+}
+
+video:-moz-full-screen::-moz-media-controls {
+  display: none !important;
+}
+
+video:-ms-fullscreen::-ms-media-controls {
+  display: none !important;
+}
+
+video:fullscreen::-webkit-media-controls {
+  display: none !important;
+}
+
+video:fullscreen::-moz-media-controls {
+  display: none !important;
+}
+
+video:fullscreen::-ms-media-controls {
+  display: none !important;
+}
+
+/* Show toggle fullscreen control in fullscreen */
+video:-webkit-full-screen {
+  cursor: pointer;
+}
+
+video:-moz-full-screen {
+  cursor: pointer;
+}
+
+video:-ms-fullscreen {
+  cursor: pointer;
+}
+
+video:fullscreen {
+  cursor: pointer;
+}
+
 .notplaying {
     opacity: 0.69;
     mix-blend-mode: darken;
