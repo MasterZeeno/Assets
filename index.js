@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", event => {
     }
 
     function handleOrientationChange() {
-        if (screen.orientation.type.startsWith('portrait')) {
-            screen.orientation.lock('landscape');
+        if (screen.orientation.type.startsWith("portrait")) {
+            screen.orientation.lock("landscape");
         }
     }
 
@@ -79,5 +79,5 @@ document.addEventListener("DOMContentLoaded", event => {
             toggleFullScreen();
         });
 
-    document.addEventListener('fullscreenchange', handleOrientationChange);
+    document.addEventListener("fullscreenchange", handleOrientationChange);
 });
