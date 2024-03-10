@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     if (currentPage > 1) {
                         const prev = document.createElement("button");
                         prev.innerText = "Prev";
+                        pager.append(last);
                     }
                     if (currentPage >= 1 && currentPage <= lastPage) {
                         const curr = document.createElement("button");
@@ -114,7 +115,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     if (currentPage < lastPage) {
                         const next = document.createElement("button");
                         next.innerText = "Next";
-                        pager.append(next);
+                        pager.append(last);
                     }
                 }
 
