@@ -163,9 +163,8 @@ document.addEventListener("DOMContentLoaded", event => {
 
                 // Query for all videos after they are added to the DOM
                 videos = document.querySelectorAll("video");
-                
-                Z.classList.remove('Z')
-                
+
+                Z.classList.remove("Z");
             }
         );
 
