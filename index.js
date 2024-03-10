@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", event => {
         } else if (document.exitFullscreen) {
             document.exitFullscreen();
         }
+        video.classList.toggle("fullScreen", document.fullscreenElement);
     }
 
     function pauseOthers(currentVid) {
