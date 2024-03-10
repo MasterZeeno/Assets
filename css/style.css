@@ -94,7 +94,6 @@ video:fullscreen {
 }
  */
 
-.Z,
 .notready {
     opacity: 0;
     height: 0;
@@ -111,7 +110,7 @@ video:fullscreen {
 }
 
 .video-list {
-    overflow-x: hidden !important;
+    overflow: hidden;
     width: 100%;
     height: auto;
     background-color: rgb(0 0 0 / 30%);
