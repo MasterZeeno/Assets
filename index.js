@@ -158,6 +158,9 @@ document.addEventListener("DOMContentLoaded", event => {
         );
         // pauseOthers(lastPlayedVideo);
         if (!document.fullscreenElement && lastPlayedVideo) {
+          if(lastPlayedVideo.paused){
+            lastPlayedVideo.play()
+          }
             setTimeout(() => {
                 const rect = lastPlayedVideo.getBoundingClientRect();
                 window.scrollTo({
