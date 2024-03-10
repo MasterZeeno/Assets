@@ -90,10 +90,6 @@ document.addEventListener("DOMContentLoaded", event => {
                 left: rect.left + window.scrollX,
                 behavior: "smooth"
             });
-        } else {
-            if (screen.orientation.type.startsWith("portrait")) {
-                screen.orientation.lock("landscape");
-            }
         }
     });
 });
