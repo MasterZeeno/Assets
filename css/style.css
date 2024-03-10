@@ -86,7 +86,6 @@ img,
     border: none;
     border-top: 3px solid rgb(0 0 0 / 30%);
     border-bottom: 3px solid rgb(0 0 0 / 30%);
-    z-index: 1;
 }
 
 .name {
