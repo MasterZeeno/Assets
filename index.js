@@ -76,12 +76,15 @@ document.addEventListener("DOMContentLoaded", event => {
     document.addEventListener("fullscreenchange", function () {
         if (!document.fullscreenElement && lastPlayedVideo) {
             // Pan to the last played video player
-            const rect = lastPlayedVideo.getBoundingClientRect();
-            window.scrollTo({
-                top: rect.top + window.scrollY,
-                left: rect.left + window.scrollX,
-                behavior: "smooth"
-            });
+            setTimeout(() => {
+                // Pan to the last played video player
+                const rect = lastPlayedVideo.getBoundingClientRect();
+                window.scrollTo({
+                    top: rect.top + window.scrollY,
+                    left: rect.left + window.scrollX,
+                    behavior: "smooth"
+                });
+            }, 500); // Adjust delay time as needed
         }
     });
 });
