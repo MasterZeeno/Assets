@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", event => {
     const name = document.querySelector(".name");
 
     const videoList = document.querySelector(".video-list");
+    let lastPlayedVideo;
 
     function toggleFullScreen() {
         if (!document.fullscreenElement) {
@@ -16,8 +17,8 @@ document.addEventListener("DOMContentLoaded", event => {
     }
 
     function handleOrientationChange() {
-        if (screen.orientation.type.startsWith("portrait")) {
-            screen.orientation.lock("landscape");
+        if (screen.orientation.type.startsWith('portrait')) {
+            screen.orientation.lock('landscape');
         }
     }
 
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     }
                 });
                 this.requestFullscreen();
+                lastPlayedVideo = this;
             } else {
                 this.pause();
                 this.classList.add("notplaying");
@@ -79,5 +81,18 @@ document.addEventListener("DOMContentLoaded", event => {
             toggleFullScreen();
         });
 
-    document.addEventListener("fullscreenchange", handleOrientationChange);
+    document.addEventListener('fullscreenchange', function() {
+        if (!document.fullscreenElement && lastPlayedVideo) {
+            // Centering last played video player
+            const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+            const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+            const playerWidth = lastPlayedVideo.offsetWidth;
+            const playerHeight = lastPlayedVideo.offsetHeight;
+            const left = (viewportWidth - playerWidth) / 2;
+            const top = (viewportHeight - playerHeight) / 2;
+            lastPlayedVideo.style.position = 'absolute';
+            lastPlayedVideo.style.left = left + 'px';
+            lastPlayedVideo.style.top = top + 'px';
+        }
+    });
 });
