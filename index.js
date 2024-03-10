@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", event => {
     const videoList = document.querySelector(".video-list");
     let lastPlayedVideo;
 
+    function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+            handleOrientationChange();
+        } else if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+
     function handleOrientationChange() {
         if (screen.orientation.type.startsWith("portrait")) {
             screen.orientation.lock("landscape");
@@ -38,17 +47,16 @@ document.addEventListener("DOMContentLoaded", event => {
                         otherVideo.classList.add("notplaying");
                     }
                 });
-                this.requestFullscreen();
-
+                toggleFullScreen();
                 lastPlayedVideo = this;
             } else {
                 this.pause();
                 this.classList.add("notplaying");
             }
-            handleOrientationChange();
         });
         videoList.append(player);
     }
+
     url =
         "https://script.google.com/macros/s/AKfycbx__TeLYl-rasvQ2msCnxNI7MpZB4BBp2Xmm-ZcTppgvRnrc4uQnCGWyUZlk5mppcD9/exec";
 
