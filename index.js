@@ -15,9 +15,7 @@ window.addEventListener("DOMContentLoaded", event => {
     function createVideoJs(source) {
         const player = document.createElement("video");
 
-        player.setAttribute("class", "video-js vjs-fluid");
-        // player.setAttribute("width", 300);
-        //         player.setAttribute("height", 150);
+        player.setAttribute("class", "video-js vjs-fluid vjs-controls-enabled vjs-touch-enabled");
         player.setAttribute("controls", "");
         player.setAttribute("autoplay", "");
         player.setAttribute("muted", "false");
@@ -28,8 +26,7 @@ window.addEventListener("DOMContentLoaded", event => {
         videoList.append(player);
         player.load();
     }
-
-    let counter = 0;
+    
     video_src.forEach(v_src => {
         createVideoJs(v_src);
     });
