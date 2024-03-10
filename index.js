@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", event => {
         videos.forEach(otherVideo => {
             if (otherVideo !== currentVid && !otherVideo.paused) {
                 otherVideo.pause();
-                otherVideo.classList.add("notplaying");
+                otherVideo.classList.toggle("notplaying", otherVideo.paused);
             }
         });
     }
