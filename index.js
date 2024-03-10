@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", event => {
                 });
 
                 const cover = document.createElement("div");
-                cover.classList.add('cover')
+                cover.classList.add("cover");
                 videoList.append(cover);
 
                 for (let step = currPage; step <= lastPage; step++) {
