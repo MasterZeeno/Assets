@@ -124,6 +124,10 @@ document.addEventListener("DOMContentLoaded", event => {
         );
 
     document.addEventListener("fullscreenchange", function () {
+      lastPlayedVideo.classList.toggle(
+                "fullScreen",
+                document.fullscreenElement
+            );
         if (!document.fullscreenElement && lastPlayedVideo) {
             pauseOthers(lastPlayedVideo);
             setTimeout(() => {
