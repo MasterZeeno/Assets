@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     }
                 });
 
-                cover.height(videoList.height)
+                cover.height(videoList.height);
 
                 for (let step = currPage; step <= lastPage; step++) {
                     const items = document.createElement("div");
