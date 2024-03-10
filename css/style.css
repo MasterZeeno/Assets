@@ -116,3 +116,8 @@ span {
     background-color: transparent;
     color: #ff9000;
 }
+
+.current {
+  color: black;
+  background-color: white
+}
