@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", event => {
         player.addEventListener("click", function () {
             if (player.paused) {
                 player.play();
-                toggleFullScreen(player)
+                toggleFullScreen(player);
                 player.classList.remove("notplaying");
                 pauseOthers(player);
             } else {
@@ -74,7 +74,8 @@ document.addEventListener("DOMContentLoaded", event => {
         }
     }
 
-    const url = "https://script.google.com/macros/s/AKfycbx__TeLYl-rasvQ2msCnxNI7MpZB4BBp2Xmm-ZcTppgvRnrc4uQnCGWyUZlk5mppcD9/exec";
+    const url =
+        "https://script.google.com/macros/s/AKfycbx__TeLYl-rasvQ2msCnxNI7MpZB4BBp2Xmm-ZcTppgvRnrc4uQnCGWyUZlk5mppcD9/exec";
 
     fetch(url)
         .then(response => response.json())
