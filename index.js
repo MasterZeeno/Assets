@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", event => {
         player.addEventListener("click", function () {
             if (player.paused && player.readyState > 0) {
                 player.play();
-                pauseOthers(player);
+                // pauseOthers(player);
                 lastPlayedVideo = player;
                 toggleFullScreen(player);
             } else {
@@ -90,10 +90,10 @@ document.addEventListener("DOMContentLoaded", event => {
             }
             player.classList.toggle("notplaying", player.paused);
         });
-        
-        player.onplaying = function() {
-  alert("The video is now playing");
-};
+
+        player.onplaying = function () {
+            pauseOthers(player);
+        };
 
         // player.addEventListener("dblclick", function () {
         //             lastPlayedVideo = player;
