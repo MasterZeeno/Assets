@@ -10,7 +10,12 @@ document.addEventListener("DOMContentLoaded", event => {
     let lastPlayedVideo;
 
     function splitName(name) {
-        const names = name.includes(" ") ? name.split(" ") : [name.slice(0, Math.ceil(name.length / 2)), name.slice(Math.ceil(name.length / 2))];
+        const names = name.includes(" ")
+            ? name.split(" ")
+            : [
+                  name.slice(0, Math.ceil(name.length / 2)),
+                  name.slice(Math.ceil(name.length / 2))
+              ];
         [name1.innerText, name2.innerText] = names;
     }
 
@@ -44,7 +49,9 @@ document.addEventListener("DOMContentLoaded", event => {
             name: "media"
         };
 
-        Object.keys(attributes).forEach(key => player.setAttribute(key, attributes[key]));
+        Object.keys(attributes).forEach(key =>
+            player.setAttribute(key, attributes[key])
+        );
 
         const player_source = document.createElement("source");
         player_source.setAttribute("src", video_source);
@@ -66,16 +73,17 @@ document.addEventListener("DOMContentLoaded", event => {
         videoList.append(player);
     }
 
-    const url = "https://script.google.com/macros/s/AKfycbx__TeLYl-rasvQ2msCnxNI7MpZB4BBp2Xmm-ZcTppgvRnrc4uQnCGWyUZlk5mppcD9/exec";
+    const url =
+        "https://script.google.com/macros/s/AKfycbx__TeLYl-rasvQ2msCnxNI7MpZB4BBp2Xmm-ZcTppgvRnrc4uQnCGWyUZlk5mppcD9/exec";
 
     fetch(url)
         .then(response => response.json())
-        .then(({header: headerImg, profile: profileImg, name, urls}) => {
+        .then(({ header: headerImg, profile: profileImg, name, urls }) => {
             header.style.backgroundImage = `url('${headerImg}')`;
             profile.setAttribute("src", profileImg);
             splitName(name);
 
-            urls.forEach(({video_url, image_url}) => {
+            urls.forEach(({ video_url, image_url }) => {
                 if (video_url && image_url) {
                     createVideoJs(video_url, image_url);
                 }
