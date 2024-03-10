@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", event => {
                         pager.append(next);
                     }
                 }
-                body.classList.remove("notready");
+                
                 // Query for all videos after they are added to the DOM
                 videos = document.querySelectorAll("video");
             }
