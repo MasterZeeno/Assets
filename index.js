@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", event => {
         player.append(player_source);
         player.addEventListener("click", function () {
             if (player.paused) {
-              toggleFullScreen()
+                toggleFullScreen();
                 player.play();
                 player.classList.remove("notplaying");
                 const videos = document.querySelectorAll("video");
@@ -59,12 +59,11 @@ window.addEventListener("DOMContentLoaded", event => {
                 }
             });
         });
-        function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-  }
-}
-
+    function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
 });
