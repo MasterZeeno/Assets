@@ -48,10 +48,9 @@ document.addEventListener("DOMContentLoaded", event => {
                     }
                 });
                 setTimeout(() => {
-                toggleFullScreen(this);
-                lastPlayedVideo = this;
-                }, 500);
-                
+                    toggleFullScreen(this);
+                    lastPlayedVideo = this;
+                }, 300);
             } else {
                 this.pause();
                 this.classList.add("notplaying");
