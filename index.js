@@ -91,17 +91,5 @@ window.addEventListener("load", event => {
 
     // Initial check when the page loads
     handleVideoPlayPause();
-</script>
 
-</body>
-</html>
-This code will play the video when it comes into the center of the viewport and pause it when it goes out of the center. It listens for scroll and resize events to update the play/pause state accordingly.
-
-
-
-
-
-Message ChatGPT…
-
-ChatGPT can make mistakes. Consider checking impo
 });
