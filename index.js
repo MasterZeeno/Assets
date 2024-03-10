@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", event => {
     const name1 = document.querySelector(".name1");
     const name2 = document.querySelector(".name2");
     const videoList = document.querySelector(".video-list");
+    const pager = document.querySelector(".pager");
 
     let lastPlayedVideo;
     let videos;
