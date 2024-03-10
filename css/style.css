@@ -16,7 +16,7 @@ body {
 
 body {
     will-change: opacity;
-    transition: opacity 600ms ease-in-out;
+    transition: opacity 1s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
