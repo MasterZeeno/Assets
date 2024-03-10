@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", event => {
 });
 
 window.addEventListener("load", event => {
-  const videos = document.querySelectorAll('video');
+    const videos = document.querySelectorAll("video");
 
     // Function to check if an element is in the center of the viewport
     function isElementInViewport(el) {
@@ -69,8 +69,10 @@ window.addEventListener("load", event => {
         return (
             rect.top >= 0 &&
             rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+                (window.innerWidth || document.documentElement.clientWidth)
         );
     }
 
@@ -86,10 +88,9 @@ window.addEventListener("load", event => {
     }
 
     // Event listener to handle scroll and resize events
-    window.addEventListener('scroll', handleVideoPlayPause);
-    window.addEventListener('resize', handleVideoPlayPause);
+    window.addEventListener("scroll", handleVideoPlayPause);
+    window.addEventListener("resize", handleVideoPlayPause);
 
     // Initial check when the page loads
     handleVideoPlayPause();
-
 });
