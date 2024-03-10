@@ -43,7 +43,9 @@ img {
 
 video {
     will-change: border-color, opacity;
-    transition: border-color 600ms ease-in-out;
+    transition-property: border, opacity; 
+  transition-duration: 1s; 
+  transition-timing-function: ease-out;
     border-width: 3px;
     border-style: solid;
     border-color: #ff9000;
