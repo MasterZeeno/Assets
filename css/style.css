@@ -106,4 +106,6 @@ span {
     width: 35px;
     height: 35px;
     border: 3px solid #ff9000;
+    background-color: transparent;
+    color: #ff9000;
 }
