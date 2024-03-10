@@ -143,8 +143,8 @@ span {
 }
 
 .current {
-    color: white !important;
-    line-height: 1.5 !important;
-    background-color: rgb(255 144 0 / 30%) !important;
-    border: 3px solid rgb(255 144 0 / 30%) !important;
+    color: white;
+    line-height: 1.5;
+    background-color: rgb(255 144 0 / 30%);
+    border: 3px solid rgb(255 144 0 / 30%);
 }
