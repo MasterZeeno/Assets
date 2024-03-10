@@ -58,3 +58,4 @@ window.addEventListener("load", event => {
         };
     
 });
+});
