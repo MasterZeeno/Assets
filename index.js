@@ -21,12 +21,13 @@ window.addEventListener("DOMContentLoaded", event => {
         player.append(player_source);
         player.addEventListener("click", function () {
             if (player.paused) {
-                player.classList.remove("notplaying")
+                player.classList.remove("notplaying");
                 player.play();
                 const videos = document.querySelectorAll("video");
 
                 videos.forEach(otherVideo => {
                     if (otherVideo !== video && !otherVideo.paused) {
+                        player.classList.add("notplaying");
                         otherVideo.pause();
                     }
                 });
