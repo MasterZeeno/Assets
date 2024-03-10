@@ -130,14 +130,14 @@ span {
     webkit-user-select: none;
 }
 
-.pager > *:not(.current) {
+.pager > button:not(.current) {
     color: #ff9000;
     background-color: rgb(0 0 0 / 30%);
     border: none;
     line-height: 2;
 }
 
-.pager > *:not(.current):hover {
+.pager > button:not(.current):hover {
     color: white;
     background-color: rgb(255 144 0 / 30%);
 }
