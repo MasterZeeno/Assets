@@ -99,7 +99,7 @@ span {
     align-items: center;
 }
 
-.items {
+.pager > div {
     text-align: center;
     width: 35px;
     height: 35px;
