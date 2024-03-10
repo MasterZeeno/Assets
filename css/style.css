@@ -91,7 +91,7 @@ video:fullscreen {
     cursor: pointer;
 }
  */
- 
+
 .notplaying {
     opacity: 0.69;
     mix-blend-mode: darken;
@@ -131,6 +131,8 @@ video:fullscreen {
 
 .name {
     margin: 30px auto;
+    user-select: none;
+    webkit-user-select: none;
 }
 
 span {
