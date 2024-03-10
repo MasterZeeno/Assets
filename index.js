@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", event => {
                 lastPlayedVideo = player;
             } else {
                 player.pause();
-                player.classList.add("notplaying");
             }
             player.classList.toggle("notplaying", player.paused);
         });
