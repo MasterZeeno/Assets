@@ -70,8 +70,8 @@ document.addEventListener("DOMContentLoaded", event => {
                 toggleFullScreen(player);
                 lastPlayedVideo = player;
             } else {
-                this.pause();
-                this.classList.add("notplaying");
+                player.pause();
+                player.classList.add("notplaying");
             }
         });
         videoList.append(player);
