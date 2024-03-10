@@ -72,6 +72,9 @@ img,
     align-items: center;
 }
 
+span{
+  display: block;
+}
 .name1 {
     color: #ff9000;
 }
