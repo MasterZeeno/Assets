@@ -1,8 +1,11 @@
 /* CSS styles for the video player */
 :root {
+    --profile-size: 130px;
+}
+
+* {
     margin: 0;
     padding: 0;
-    font-size: 16px;
 }
 
 body {
@@ -11,19 +14,32 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
+    color: white;
+    font-size: 16px;
 }
 
-.video-list,
-video {
+h1 {
+    margin-top: var(--profile-size);
+    margin-bottom: 30px;
+}
+
+video,
+img,
+.video-list {
+    font-size: 0;
     width: 100%;
     height: auto;
-}
-
-.video-js {
-    font-size: 0;
-    padding: 0;
-    margin: 10% auto;
     border: none;
     display: block;
     background-color: transparent;
+}
+
+.profile {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: var(--profile-size);
+    border-radius: 50%;
+    border: 3px solid black;
 }
