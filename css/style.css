@@ -101,4 +101,6 @@ span {
 
 .items {
     text-align: center;
+    width: 35px;
+    height: 35px;
 }
