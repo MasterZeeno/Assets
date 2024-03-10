@@ -45,9 +45,14 @@ img,
     background-color: transparent;
 }
 
-.video-list {
+.video-list, .cover {
     overflow-x: hidden !important;
     width: 100%;
+}
+
+.cover {
+  background-color: rgb(0 0 0 / 30%);
+    backdrop-filter: blur(4px);
 }
 
 .header {
