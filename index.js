@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", event => {
                         createVideoJs(video_url, image_url);
                     }
                 });
-                const currentPage = Number(currPage)||null;
+                const currentPage = Number(currPage) || null;
                 if (currentPage) {
                     if (currentPage > 1) {
                         const prev = document.createElement("div");
