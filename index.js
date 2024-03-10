@@ -67,9 +67,7 @@ window.addEventListener("DOMContentLoaded", event => {
                 document.exitFullscreen();
             }
         } else {
-            
-                video.requestFullscreen();
-    
+            video.requestFullscreen();
         }
     }
 });
