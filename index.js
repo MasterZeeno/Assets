@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", event => {
         player.append(player_source);
         player.addEventListener("click", function () {
             if (player.paused) {
-                document.documentElement.requestFullscreen();
+                player.requestFullscreen();
                 player.play();
                 player.classList.remove("notplaying");
                 const videos = document.querySelectorAll("video");
