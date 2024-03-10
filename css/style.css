@@ -42,6 +42,7 @@ img,
 
 .video-list {
     overflow-x: hidden !important;
+    max-width: 300px;
 }
 
 .header {
