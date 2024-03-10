@@ -21,14 +21,14 @@ window.addEventListener("DOMContentLoaded", event => {
         player.append(player_source);
         player.addEventListener("click", function () {
             if (player.paused) {
-                player.classList.remove("notplaying");
                 player.play();
+                player.classList.remove("notplaying");
                 const videos = document.querySelectorAll("video");
 
                 videos.forEach(otherVideo => {
                     if (otherVideo !== player && !otherVideo.paused) {
-                        player.classList.add("notplaying");
                         otherVideo.pause();
+                        player.classList.add("notplaying");
                     }
                 });
             } else {
