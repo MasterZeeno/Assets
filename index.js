@@ -72,10 +72,4 @@ window.addEventListener("load", event => {
             video.pause();
         }
     }
-    // Event listener to handle scroll and resize events
-    window.addEventListener("scroll", handleVideoPlayPause);
-    window.addEventListener("resize", handleVideoPlayPause);
-
-    // Initial check when the page loads
-    handleVideoPlayPause();
 });
