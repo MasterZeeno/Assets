@@ -43,7 +43,7 @@ img {
 
 video {
     will-change: border-color;
-    transition: border 300ms ease;
+    transition: border-color 600ms ease-in-out;
     border-width: 3px;
     border-style: solid;
     border-color: #ff9000;
