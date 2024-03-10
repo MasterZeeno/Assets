@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", event => {
                 if (currentPage) {
                     if (currentPage > 1) {
                         const prev = document.createElement("div");
-                        prev.innerText = "<<";
+                        prev.innerText = "Prev";
                         pager.append(prev);
                     }
                     if (currentPage >= 1 && currentPage <= lastPage) {
