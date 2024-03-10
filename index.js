@@ -58,13 +58,14 @@ document.addEventListener("DOMContentLoaded", event => {
                     createVideoJs(e.video_url, e.image_url);
                 }
             });
+            toggleFullScreen()
         });
-});
+        function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
+}
 
-document.addEventListener("load", event => {
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-    } else if (document.exitFullscreen) {
-        document.exitFullscreen();
-    }
 });
