@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", event => {
                 });
 
                 for (let step = currPage; step <= lastPage; step++) {
-                    document.createElement('div');
+                    document.createElement("div");
                 }
 
                 // Query for all videos after they are added to the DOM
