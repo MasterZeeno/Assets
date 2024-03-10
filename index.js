@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", event => {
     }
 
     function handleOrientationChange() {
-        if (screen.orientation.type.startsWith("portrait")) {
-            screen.orientation.lock("landscape");
+        if (screen.orientation.type.startsWith('portrait')) {
+            screen.orientation.lock('landscape');
         }
     }
 
@@ -81,24 +81,15 @@ document.addEventListener("DOMContentLoaded", event => {
             toggleFullScreen();
         });
 
-    document.addEventListener("fullscreenchange", function () {
+    document.addEventListener('fullscreenchange', function() {
         if (!document.fullscreenElement && lastPlayedVideo) {
-            // Centering last played video player
-            const viewportWidth = Math.max(
-                document.documentElement.clientWidth || 0,
-                window.innerWidth || 0
-            );
-            const viewportHeight = Math.max(
-                document.documentElement.clientHeight || 0,
-                window.innerHeight || 0
-            );
-            const playerWidth = lastPlayedVideo.offsetWidth;
-            const playerHeight = lastPlayedVideo.offsetHeight;
-            const left = (viewportWidth - playerWidth) / 2;
-            const top = (viewportHeight - playerHeight) / 2;
-            lastPlayedVideo.style.position = "absolute";
-            lastPlayedVideo.style.left = left + "px";
-            lastPlayedVideo.style.top = top + "px";
+            // Pan to the last played video player
+            const rect = lastPlayedVideo.getBoundingClientRect();
+            window.scrollTo({
+                top: rect.top + window.scrollY,
+                left: rect.left + window.scrollX,
+                behavior: 'smooth'
+            });
         }
     });
 });
