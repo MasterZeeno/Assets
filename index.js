@@ -28,12 +28,12 @@ window.addEventListener("DOMContentLoaded", event => {
                 videos.forEach(otherVideo => {
                     if (otherVideo !== player && !otherVideo.paused) {
                         otherVideo.pause();
-                        player.classList.add("notplaying");
+                        otherVideo.classList.add("notplaying");
                     }
                 });
             } else {
-                player.classList.add("notplaying");
                 player.pause();
+                player.classList.add("notplaying");
             }
         });
         videoList.append(player);
