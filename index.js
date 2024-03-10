@@ -94,10 +94,10 @@ document.addEventListener("DOMContentLoaded", event => {
             toggleFullScreen(player);
             pauseOthers(player);
         };
-        
-        player.onseeking = function() {
-    player.pause()
-};
+
+        player.onseeking = function () {
+            player.pause();
+        };
 
         // player.addEventListener("dblclick", function () {
         //             lastPlayedVideo = player;
