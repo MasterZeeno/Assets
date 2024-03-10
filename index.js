@@ -59,15 +59,5 @@ window.addEventListener("DOMContentLoaded", event => {
                 }
             });
         });
-    function toggleFullScreen(video) {
-        if (!video) {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen();
-            } else if (document.exitFullscreen) {
-                document.exitFullscreen();
-            }
-        } else {
-            video.requestFullscreen();
-        }
-    }
+    
 });
