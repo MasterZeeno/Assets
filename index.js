@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", event => {
         player.addEventListener("click", function () {
             if (player.paused && player.readyState > 0) {
                 player.play();
-                // pauseOthers(player);
+                pauseOthers(player);
                 lastPlayedVideo = player;
                 toggleFullScreen(player);
             } else {
