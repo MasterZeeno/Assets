@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", event => {
         if (screen.orientation.type.startsWith("portrait")) {
             screen.orientation.lock("landscape");
         } else {
-          screen.orientation.lock("portrait");
+            screen.orientation.lock("portrait");
         }
     }
 
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     }
                 });
                 this.requestFullscreen();
-                
+
                 lastPlayedVideo = this;
             } else {
                 this.pause();
