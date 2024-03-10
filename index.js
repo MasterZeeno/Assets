@@ -98,6 +98,10 @@ document.addEventListener("DOMContentLoaded", event => {
         player.onseeking = function () {
             player.pause();
         };
+        
+        player.onseeked = function() {
+    player.play()
+};
 
         // player.addEventListener("dblclick", function () {
         //             lastPlayedVideo = player;
