@@ -41,7 +41,7 @@ img,
 
 .header {
     width: 100%;
-    min-height: 300px;
+    height: 20vh;
     background-size: 400%;
     background-position: center center;
     background-repeat: no-repeat;
