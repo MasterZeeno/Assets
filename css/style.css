@@ -101,8 +101,6 @@ span {
 }
 
 .pager {
-    display: relative;
-    z-index: 5;
     position: sticky;
     bottom: 0;
     left: 0;
