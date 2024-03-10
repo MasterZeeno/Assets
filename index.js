@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", event => {
         .then(res => {
             header.style.backgroundImage = "url('" + res.header + "')";
             profile.setAttribute("src", res.profile);
+            splitName(res.name);
             name.innerText = res.name;
             res.urls.forEach(e => {
                 if (e.video_url && e.image_url) {
