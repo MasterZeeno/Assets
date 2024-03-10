@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", event => {
         player.append(player_source);
 
         player.addEventListener("click", function () {
-            if (!player.playing) {
+            if (player.paused) {
                 player.play();
                 // pauseOthers(player);
                 toggleFullScreen(player);
