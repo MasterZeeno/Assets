@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", event => {
         player.setAttribute("autoplay", "");
         player.setAttribute("muted", "false");
         player.setAttribute("name", "media");
-        player.setAttribute("controls", false); // Hide default controls
+        // player.setAttribute("controls", false); // Hide default controls
         const player_source = document.createElement("source");
         player_source.setAttribute("src", video_source);
         player_source.setAttribute("type", video_type);
