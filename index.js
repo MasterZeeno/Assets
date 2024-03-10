@@ -54,13 +54,6 @@ window.addEventListener("DOMContentLoaded", event => {
             });
         });
 
-    // video_src.forEach((v_src, index) => {
-    //         i_src = image_src[index];
-    //         createVideoJs(v_src, i_src);
-    //     });
-});
-
-window.addEventListener("load", event => {
     const videos = document.querySelectorAll("video");
 
     // Function to check if an element is in the center of the viewport
