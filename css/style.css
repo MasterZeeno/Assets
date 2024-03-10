@@ -92,7 +92,9 @@ img,
 }
 
 .name {
+  position: relative;
     margin: 30px auto;
+    z-index: 2;
 }
 
 span {
