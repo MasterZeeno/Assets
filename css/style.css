@@ -132,7 +132,7 @@ video:fullscreen {
 .name {
     margin: 30px auto;
     user-select: none;
-    webkit-user-select: none;
+    -webkit-user-select: none;
 }
 
 span {
@@ -173,7 +173,7 @@ span {
     backdrop-filter: blur(4px);
     font-weight: 600;
     user-select: none;
-    webkit-user-select: none;
+    -webkit-user-select: none;
 }
 
 .pager > button:not(.current) {
