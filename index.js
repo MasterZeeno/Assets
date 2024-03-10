@@ -14,15 +14,17 @@ window.addEventListener("DOMContentLoaded", event => {
 
     function createVideoJs(source) {
         const player = document.createElement("video");
-
-        player.setAttribute("class", "video-js vjs-fluid vjs-controls-enabled vjs-touch-enabled");
+        // player.setAttribute("class", "video-js vjs-fluid vjs-controls-enabled vjs-touch-enabled");
         player.setAttribute("controls", "");
         player.setAttribute("autoplay", "");
-        player.setAttribute("muted", "false");
+        player.setAttribute("muted", "");
         player.setAttribute("loop", "");
-        player.setAttribute("preload", "metadata");
-        player.setAttribute("src", source);
-        player.setAttribute("data-setup", "{}");
+        // player.setAttribute("preload", "metadata");
+        const player_source = document.createElement("source");
+        player_source.setAttribute("src", source);
+        player_source.setAttribute("type", video_type);
+        // player.setAttribute("data-setup", "{}");
+        player.append(player_source);
         videoList.append(player);
         player.load();
     }
