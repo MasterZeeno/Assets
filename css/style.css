@@ -41,9 +41,8 @@ img {
     background-color: transparent;
 }
 
-
 video {
-    will-change: border;
+    will-change: border-color;
     transition: border 300ms ease;
     border-width: 4px;
     border-style: solid;
