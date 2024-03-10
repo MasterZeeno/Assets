@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", event => {
         player.setAttribute("class", "notplaying");
         player.setAttribute("poster", image_source);
         player.setAttribute("autoplay", "");
-        player.setAttribute("muted", "false");
+        // player.setAttribute("muted", "false");
         player.setAttribute("name", "media");
         // player.setAttribute("controls", false); // Hide default controls
         const player_source = document.createElement("source");
