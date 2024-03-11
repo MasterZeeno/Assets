@@ -138,18 +138,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("fullscreenchange", () => {
         if (lastPlayedVideo && !document.fullscreenElement) {
-          lastPlayedVideo.classList.toggle(
+            lastPlayedVideo.classList.toggle(
                 "fullScreen",
                 !document.fullscreenElement
             );
-                setTimeout(() => {
-                    const rect = lastPlayedVideo.getBoundingClientRect();
-                    window.scrollTo({
-                        top: rect.top + window.scrollY - rect.height,
-                        left: rect.left + window.scrollX,
-                        behavior: "smooth"
-                    });
-                }, 500);
-            }
+            setTimeout(() => {
+                const rect = lastPlayedVideo.getBoundingClientRect();
+                window.scrollTo({
+                    top: rect.top + window.scrollY - rect.height,
+                    left: rect.left + window.scrollX,
+                    behavior: "smooth"
+                });
+            }, 500);
+        }
     });
 });
