@@ -21,22 +21,6 @@ document.addEventListener("DOMContentLoaded", event => {
         [name1.innerText, name2.innerText] = names;
     }
 
-    // function toggleFullScreen(video) {
-    //         if (!document.fullscreenElement) {
-    //             if (video) {
-    //                 video.requestFullscreen();
-    //             } else {
-    //                 document.fullscreenElement.requestFullscreen();
-    //             }
-    //             if (screen.orientation.type.startsWith("portrait")) {
-    //                 screen.orientation.lock("landscape");
-    //             }
-    //         } else if (document.exitFullscreen) {
-    //             document.exitFullscreen();
-    //         }
-    //         // video.classList.toggle("fullScreen", !document.fullscreenElement);
-    //     }
-
     function toggleFullScreen(video) {
         if (
             !document.fullscreenElement &&
@@ -48,7 +32,6 @@ document.addEventListener("DOMContentLoaded", event => {
         } else if (document.exitFullscreen) {
             document.exitFullscreen();
         }
-
     }
 
     function pauseOthers(currentVid) {
