@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }) => {
                 header.style.backgroundImage = `url('${headerImg}')`;
                 profile.src = profileImg;
-                profile.alt=name
+                profile.alt = name;
                 splitName(name);
 
                 urls.forEach(({ video_url, image_url }) => {
