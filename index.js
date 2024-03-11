@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (lastPlayedVideo && !document.fullscreenElement) {
             lastPlayedVideo.classList.toggle(
                 "fullScreen",
-                !document.fullscreenElement
+                document.fullscreenElement
             );
             setTimeout(() => {
                 const rect = lastPlayedVideo.getBoundingClientRect();
