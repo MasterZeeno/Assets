@@ -102,11 +102,6 @@ document.addEventListener("DOMContentLoaded", event => {
             }, 1000);
         };
 
-        // player.addEventListener("dblclick", function () {
-        //             lastPlayedVideo = player;
-        //             toggleFullScreen(player);
-        //         });
-
         videoList.append(player);
     }
 
