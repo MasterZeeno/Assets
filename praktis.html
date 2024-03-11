@@ -9,7 +9,164 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Master Zeeno</title>
         <style>
-            /* Your CSS styles remain unchanged */
+            :root {
+    --profile-size: 130px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: black;
+    scrollbar-width: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    overflow-y: scroll;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+video,
+img {
+    font-size: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: transparent;
+}
+
+video {
+    will-change: border, opacity, height;
+    transition-property: border, opacity, height;
+    transition-duration: 600ms;
+    transition-timing-function: ease-in-out;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #ff9000;
+    border-radius: 4px;
+    mix-blend-mode: none;
+}
+
+.notready {
+    opacity: 0;
+    height: 0;
+}
+
+.notplaying {
+    opacity: 0.69;
+    mix-blend-mode: darken;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-color: rgb(255 255 255 / 30%);
+    border-bottom-color: rgb(255 255 255 / 30%);
+}
+
+.video-list {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: rgb(0 0 0 / 30%);
+    backdrop-filter: blur(6px);
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vmax;
+    background-size: 150%;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.profile {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: var(--profile-size);
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.name {
+    margin: 30px auto;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+span {
+    display: inline-block;
+}
+
+.name1 {
+    color: #ff9000;
+}
+
+.fullScreen {
+    border: none;
+    border-radius: 0;
+}
+
+.pager {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0 0 0 / 30%);
+    backdrop-filter: blur(4px);
+}
+
+.pager > button {
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 8px;
+    padding: 0 12px;
+    height: 30px;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    font-weight: 600;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.pager > button:not(.current) {
+    color: #ff9000;
+    background-color: rgb(0 0 0 / 30%);
+    border: none;
+    line-height: 2;
+}
+
+.pager > button:not(.current):hover {
+    color: white;
+    background-color: rgb(255 144 0 / 30%);
+}
+
+.current {
+    color: white;
+    line-height: 1.5;
+    background-color: rgb(255 144 0 / 30%);
+    border: 3px solid rgb(255 144 0 / 30%);
+}
+
         </style>
     </head>
     <body>
