@@ -148,8 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 500);
         }
         lastPlayedVideo.classList.toggle(
-                "fullScreen",
-                document.fullscreenElement
-            );
+            "fullScreen",
+            document.fullscreenElement
+        );
     });
 });
