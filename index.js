@@ -138,10 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("fullscreenchange", () => {
         if (lastPlayedVideo && !document.fullscreenElement) {
-            lastPlayedVideo.classList.toggle(
-                "fullScreen",
-                document.fullscreenElement
-            );
             setTimeout(() => {
                 const rect = lastPlayedVideo.getBoundingClientRect();
                 window.scrollTo({
@@ -151,5 +147,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             }, 500);
         }
+        lastPlayedVideo.classList.toggle(
+                "fullScreen",
+                document.fullscreenElement
+            );
     });
 });
