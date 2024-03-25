@@ -1,5 +1,5 @@
 :root {
-    --profile-size: clamp(120px 23vmax 200px);
+    --profile-size: clamp(120px 23vh 200px);
 }
 
 * {
