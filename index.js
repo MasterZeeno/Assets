@@ -50,7 +50,7 @@ profileContainer.style.opacity = 0;
         player.autoplay = false;
         player.preload = "metadata";
         player.poster = imageSource;
-        player.classList.add("notready");
+        // player.classList.add("notready");
 
         const source = document.createElement("source");
         source.src = videoSource;
