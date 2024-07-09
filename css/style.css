@@ -86,7 +86,7 @@ video {
     left: 50%;
     transform: translate(-50%);
     width: var(--profile-size);
-    height: auto;
+    height: var(--profile-size);
     border-radius: 50%;
     border: 3px solid black;
 }
