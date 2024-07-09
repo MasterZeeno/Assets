@@ -160,5 +160,5 @@ profileContainer.style.opacity = 0;
 
    const spinners = document.querySelector(".lds-ripple");
 
-    spinners.style.display = "hidden";
+    spinners.style.display = "none";
 });
