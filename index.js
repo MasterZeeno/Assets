@@ -108,7 +108,7 @@ profileContainer.style.opacity = 0;
                 profile.src = profileImg;
                 profile.alt = name;
                 splitName(name);
-                profileContainer.style.opacity = 1;
+                
 
                 urls.forEach(({ video_url, image_url }) => {
                     if (video_url && image_url) {
@@ -133,6 +133,7 @@ profileContainer.style.opacity = 0;
                     next.textContent = "Next";
                     pager.appendChild(next);
                 }
+                profileContainer.style.opacity = 1;
             }
         )
         .catch(error => {
