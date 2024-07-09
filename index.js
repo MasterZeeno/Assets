@@ -153,5 +153,4 @@ document.addEventListener("DOMContentLoaded", () => {
             document.fullscreenElement
         );
     });
-    profileContainer.classList.remove("notready");
 });
