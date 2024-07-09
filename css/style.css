@@ -80,6 +80,11 @@ video {
     background-repeat: no-repeat;
 }
 
+.profile {
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
 .profile-container {
     position: absolute;
     top: 50px;
@@ -87,8 +92,6 @@ video {
     transform: translate(-50%);
     width: var(--profile-size);
     height: var(--profile-size);
-    border-radius: 50%;
-    border: 3px solid black;
 }
 
 .name {
