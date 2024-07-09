@@ -157,4 +157,8 @@ profileContainer.style.opacity = 0;
             document.fullscreenElement
         );
     });
+
+   const spinners = document.querySelector(".lds-ripple");
+
+    spinners.style.display = "hidden";
 });
