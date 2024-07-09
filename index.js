@@ -72,12 +72,12 @@ profileContainer.style.opacity = 0;
             lastPlayedVideo = player;
         };
 
-        player.oncanplay = () => {
-            setTimeout(() => {
-                player.classList.remove("notready");
-                player.classList.add("notplaying");
-            }, 1000);
-        };
+        // player.oncanplay = () => {
+            // setTimeout(() => {
+                // player.classList.remove("notready");
+                // player.classList.add("notplaying");
+            // }, 1000);
+        // };
 
         videoList.appendChild(player);
         videos.push(player);
