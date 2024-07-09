@@ -1,5 +1,5 @@
 :root {
-    --profile-size: clamp(108px, 36vmax, 216px);
+    --profile-size: clamp(75px, 25vmax, 150px);
 }
 
 * {
@@ -80,12 +80,13 @@ video {
     background-repeat: no-repeat;
 }
 
-.profile {
+.profile-container {
     position: absolute;
     top: 50px;
     left: 50%;
     transform: translate(-50%);
     width: var(--profile-size);
+    height: auto;
     border-radius: 50%;
     border: 3px solid black;
 }
