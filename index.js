@@ -50,7 +50,7 @@ profileContainer.style.opacity = 0;
         player.autoplay = false;
         player.preload = "metadata";
         player.poster = imageSource;
-        // player.classList.add("notready");
+        player.classList.add("notready");
 
         const source = document.createElement("source");
         source.src = videoSource;
@@ -72,12 +72,12 @@ profileContainer.style.opacity = 0;
             lastPlayedVideo = player;
         };
 
-        // player.oncanplay = () => {
-            // setTimeout(() => {
-                // player.classList.remove("notready");
-                // player.classList.add("notplaying");
-            // }, 1000);
-        // };
+        player.oncanplay = () => {
+            setTimeout(() => {
+                 player.classList.remove("notready");
+                 player.classList.add("notplaying");
+             }, 1000);
+         };
 
         videoList.appendChild(player);
         videos.push(player);
