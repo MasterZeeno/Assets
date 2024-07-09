@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const videoList = document.querySelector(".video-list");
     const pager = document.querySelector(".pager");
 
+profileContainer.style.opacity = 0;
+
     let lastPlayedVideo;
     let videos = [];
 
@@ -106,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 profile.src = profileImg;
                 profile.alt = name;
                 splitName(name);
+                profileContainer.style.opacity = 1;
 
                 urls.forEach(({ video_url, image_url }) => {
                     if (video_url && image_url) {
