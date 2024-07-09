@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const videoType = "application/vnd.apple.mpegurl";
     const header = document.querySelector(".header");
+    const profileContainer = document.querySelector(".profile-container");
     const profile = document.querySelector(".profile");
     const name1 = document.querySelector(".name1");
     const name2 = document.querySelector(".name2");
@@ -152,5 +153,5 @@ document.addEventListener("DOMContentLoaded", () => {
             document.fullscreenElement
         );
     });
-    profile.classList.remove("notready");
+    profileContainer.classList.remove("notready");
 });
