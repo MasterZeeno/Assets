@@ -29,7 +29,6 @@ const handleCommand = async (cmd) => {
   }
 };
 
-const silent = `> /dev/null 2>&1`;
 const os_type = os.platform();
 const gitCommands = [`git add .`, `git commit -m "Git commit using ${toProperCase(os_type)}."`, `git push -u origin main`];
 
