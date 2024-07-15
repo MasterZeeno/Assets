@@ -5,7 +5,7 @@
     "main": "app.js",
     "type": "module",
     "scripts": {
-        "push": "git init && git add . && git commit -m \"Let's go!\" && git push -u origin main",
+        "push": "git init 2>/dev/null && git add . 2>/dev/null && git commit -m \"Let's go!\" 2>/dev/null && git push -u origin main 2>/dev/null",
         "start": "node app.js"
     },
     "keywords": [],
