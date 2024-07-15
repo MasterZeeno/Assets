@@ -1,0 +1,42 @@
+:root,
+[data-bs-theme=light] {
+    --bd-color-bg: #ffa32a;
+    --bd-color-rgb: 255, 163, 26;
+    --bd-color-hover-bg: #ffb957;
+    --bd-color-active-bg: #e69521;
+}
+
+[data-bs-theme=dark] {
+    --bd-color-hover-bg: #ff8f00;
+    --bd-color-active-bg: #cc7a00;
+}
+
+.container, #cover, #profile {
+    display: flex;
+    align-items:flex-end;
+    justify-content:center;
+}
+
+.container, #cover {
+    width: clamp(300px, 100vmax, 1200px);
+}
+
+#cover {
+    background-image: url('https://ei.phncdn.com/(m=bLyLfah67sagql)(mh=zGHTitBqBO4ok-DV)5c168b8e-3c14-4ffc-9e6c-1ac1c9206f0d.jpg');
+    background-repeat: no-repeat;
+    background-position: top, center;
+    background-size: 80%;
+    max-height: 15vmax;
+    margin: 0 auto;
+}
+
+#profile {
+    background-image: url('https://ei.phncdn.com/pics/users/359/743/661/avatar1501347014/(m=ewILGCjadOf)(mh=h3juOm-bNYlGpqrP)200x200.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 8vmax;
+    height: 8vmax;
+    border-radius: 50%;
+    border: 0.15rem solid var(--bd-color-active-bg);
+}
