@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="public/js/color-modes.js"></script>
+    <script src="js/color-modes.js"></script>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>PHUB</title>
-    <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <style>
       .bi {
         vertical-align: -0.125em;
@@ -42,8 +42,8 @@
       }
     </style>
   </head>
-  <body class="bg-body-tertiary">
-    <div class="container-fluid">
+  <body class="min-vh-100 bg-body-tertiary">
+    <div class="">
       <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
           <path
@@ -68,7 +68,7 @@
         </symbol>
       </svg>
 
-      <div class="dropdown position-fixed top-0 end-0 mt-3 me-5 bd-mode-toggle">
+      <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         <button
           class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
           id="bd-theme"
@@ -136,14 +136,14 @@
           </li>
         </ul>
       </div>
-      <div id="cover" class="mt-3">
-        <div id="profile">
+      <div id="cover" class="d-flex align-items-end justify-content-center">
+        <div id="profile" class="">
           <span id="firstname">Haley</span>
           <span id="lastname">Reed</span>
         </div>
       </div>
     </div>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="public/js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
