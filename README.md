@@ -1,1 +1,1 @@
-https://masterzeeno.github.io/Assets/
+https://masterzeeno.github.io/public/
